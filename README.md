@@ -1,55 +1,65 @@
-# Rakindu Fernando 🌟  
-> **Motivated and highly creative IT Professional in the making.**  
-[![Contact Me](https://img.shields.io/badge/Email-rakindufernando@gmail.com-blue?style=flat&logo=gmail)](mailto:rakindufernando@gmail.com)  
-[![Connect on LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat&logo=linkedin)](https://www.linkedin.com/in/rakindu-fernando-78a665233)  
+# 🌟 Rakindu Fernando  
+*Your Creative IT Professional in the Making*  
 
-![Profile Banner](https://via.placeholder.com/1200x300.png?text=Rakindu+Fernando)  
-
----
-
-## 🚀 About Me  
-I am currently pursuing a **BTEC HND in Computing (Software Engineering)**, driven by a strong foundation in communication, leadership, and problem-solving. With a keen interest in UI/UX design, programming, and IT solutions, I aspire to make technology seamless and impactful.  
-
-- 🌍 Based in Sri Lanka 🇱🇰  
-- 👨‍💻 Experienced with HTML, CSS, and Visual Studio Code  
-- 🎨 Skilled in Adobe Photoshop, Lightroom, Illustrator, and After Effects  
+[![Email Me](https://img.shields.io/badge/Email-rakindufernando@gmail.com-red?style=for-the-badge&logo=gmail)](mailto:rakindufernando@gmail.com)  
+[![Connect on LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/rakindu-fernando-78a665233)  
 
 ---
 
-## 🖥️ Projects & Work Experience  
-- **Internship:** Hatton National Bank PLC  
-- **Project Work:**  
-  - **Web Design & Development:** Projects showcasing modern UI/UX principles  
-  - **Software Development:** Applied lifecycle practices for client-centric applications  
+![Banner](https://via.placeholder.com/1200x350.png?text=Technology+Meets+Creativity+-+Rakindu+Fernando)
+
+## 👨‍💻 Who Am I?  
+Hey there! I'm **Rakindu Fernando**, a dedicated and motivated individual with a flair for **UI/UX design**, **programming**, and **creative problem-solving**. I’m passionate about creating seamless IT solutions that bring value to users.  
+
+🎓 Currently pursuing a **BTEC HND in Computing (Software Engineering)**  
+💡 Combining **tech-savviness** with **creative vision**  
+🚀 Fueling innovation one line of code at a time!
 
 ---
 
-## 🌟 Skills & Tools  
-### Programming  
-![HTML](https://img.shields.io/badge/HTML-Intermediate-orange?style=flat&logo=html5)  
-![CSS](https://img.shields.io/badge/CSS-Intermediate-blue?style=flat&logo=css3)  
+## 🎨 A Glimpse into My Skill Set  
 
-### Design Tools  
-![Photoshop](https://img.shields.io/badge/Photoshop-Expert-blue?style=flat&logo=adobephotoshop)  
-![Lightroom](https://img.shields.io/badge/Lightroom-Expert-blue?style=flat&logo=adobelightroom)  
+### Programming & Development 💻  
+- **HTML & CSS** – Structuring and styling the web  
+- **Visual Studio Code** – My code editor of choice  
 
-### Soft Skills  
-- Leadership and Team Management  
-- Creative Problem-Solving  
-- Adaptability  
+### Creative Arts & Design 🖌️  
+- **Adobe Photoshop & Illustrator** – Where creativity thrives  
+- **Adobe Lightroom Classic** – Refining details to perfection  
+- **Adobe After Effects** – Bringing imagination to life  
 
----
-
-## 📈 Achievements  
-🎉 Third Place in SPECTRUM 2019 Art Competition  
-🎺 Member of SEBS Art Circle  
-📷 Founder of *Rakindu Fernando Photography*  
+### Professional Capabilities ⚡  
+- Leadership & Team Management 🤝  
+- Communication & Collaboration 🗣️  
+- Problem-Solving and Innovation 🧠  
 
 ---
 
-## 🤝 Let's Collaborate  
-💬 I'm open to collaboration on software, web development, and design projects. Connect with me today!  
+## 🔧 Featured Projects  
+✨ **Photography and Media Production**  
+- Founder of *Rakindu Fernando Photography*  
+- Multimedia projects with **DR Productions** and **St. Joseph’s Church Media Unit**  
+
+✨ **Web Design & Development**  
+- Developed dynamic web projects emphasizing **modern UI/UX principles**  
 
 ---
 
-[![View My Resume](https://img.shields.io/badge/View-Resume-green?style=flat&logo=adobeacrobatreader)](RESUME_LINK_PLACEHOLDER)  
+## 🏆 Accomplishments & Highlights  
+- **Leadership:** Served as a school prefect and youth community leader  
+- **Photography:** Established professional portfolio  
+- **Awards:** Third place in **SPECTRUM 2019 Art Competition**  
+
+---
+
+## 🤝 Let’s Create Something Amazing Together!  
+Do you have an idea, project, or design challenge? Let’s collaborate and make something extraordinary.  
+
+🌟 **Available for:**  
+- Frontend Web Development Projects  
+- UI/UX Design Initiatives  
+- Creative & Media Content Development  
+
+---
+
+[![View My Resume](https://img.shields.io/badge/View-Resume-brightgreen?style=for-the-badge&logo=adobeacrobatreader)](RESUME_LINK_PLACEHOLDER)  
