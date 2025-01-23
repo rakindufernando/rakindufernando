@@ -6,7 +6,7 @@
 
 ---
 
-![Banner]([[https://via.placeholder.com/1200x350.png?text=Technology+Meets+Creativity+-+Rakindu+Fernando](https://drive.google.com/file/d/1Al8nH5n_fQ3i9bkJoHzwBby-XwJPjjft/view?usp=sharing)](https://github.com/rakindufernando/rakindufernando/commit/8201062742db9ebeccf91f469977ce16af51d384))
+
 
 ## 👨‍💻 Who Am I?  
 Hey there! I'm **Rakindu Fernando**, a dedicated and motivated individual with a flair for **UI/UX design**, **programming**, and **creative problem-solving**. I’m passionate about creating seamless IT solutions that bring value to users.  
