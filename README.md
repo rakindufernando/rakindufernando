@@ -1,7 +1,7 @@
 # Rakindu Fernando
 Full Stack Web Developer
 
-![Rakindu Fernando](https://via.placeholder.com/150)
+![Rakindu Fernando]([https://via.placeholder.com/150](https://www.facebook.com/photo/?fbid=703735531650453&set=a.106391164718229))
 
 ## Education
 - 🎓 Pearson BTEC HND, Achievers International (2023 - present)
