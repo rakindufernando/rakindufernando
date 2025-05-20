@@ -1,0 +1,1320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>TechTrend - Rakindu Fernando</title>
+  <link rel="icon" type="image/x-icon" href="Favicon.png">
+
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+
+  <style>
+    /* Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+      line-height: 1.6;
+      background-color: #f7f7f7;
+      color: #333;
+      font-size: 16px;
+      padding: 0;
+    }
+
+    /* Hero Section */
+.hero-section {
+  background: url('Tech trend.jpg') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  color: white;
+  z-index: 1;
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  opacity: 0;
+  animation: fadeIn 2s ease forwards;
+}
+
+.hero-content p {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: fadeIn 2s ease forwards;
+  animation-delay: 1s;
+}
+
+.cta-btn a {
+  background-color: #00ccff;
+  padding: 15px 25px;
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-btn a:hover {
+  background-color: #009bb2;
+  transform: scale(1.1);
+}
+
+/* Button Hover Animation */
+.view-work-btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: #00ccff;
+  color: white;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.view-work-btn:hover {
+  transform: translateY(-5px);
+  background-color: #009bb2;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Contact Section */
+.contact-section {
+  padding: 60px 20px;
+  text-align: center;
+  background: linear-gradient(to right, #f0f8ff, #e6f7ff); /* Light gradient background */
+}
+
+.section-title {
+  margin-bottom: 30px;
+}
+
+.section-title h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.contact-info i {
+  margin-right: 10px;
+  color: #00ccff;
+}
+
+.contact-form {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.contact-form .contact-info {
+  max-width: 50%;
+  text-align: left;
+}
+
+.contact-form .contact-info p {
+  margin-bottom: 20px;
+}
+
+.contact-form .send-message {
+  max-width: 45%;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  background-color: #00ccff;
+  color: white;
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #009bb2;
+}
+
+/* Responsive Design for Mobile View */
+@media (max-width: 768px) {
+  .contact-form {
+    flex-direction: column;
+  }
+
+  .contact-form .contact-info,
+  .contact-form .send-message {
+    max-width: 100%;
+  }
+}
+
+.resume-section {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.resume-section .section-title h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.resume-section .section-title p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.resume-btn {
+  display: inline-block;
+  background-color: #00ccff;
+  color: white;
+  padding: 14px 28px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.resume-btn:hover {
+  background-color: #009bb2;
+  transform: scale(1.05);
+}
+
+
+/* Footer Styles */
+.footer {
+  background-color: #2a2a2a;
+  color: #fff;
+  padding: 30px 0;
+  text-align: center;
+}
+
+.footer .footer-content {
+  margin-bottom: 20px;
+}
+
+.footer .footer-content h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.footer .footer-content p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.footer .social-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer .social-links a {
+  color: #fff;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.footer .social-links a:hover {
+  color: #00ccff;
+}
+
+.footer .footer-bottom p {
+  font-size: 1rem;
+  color: #bbb;
+  margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer .social-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .contact-form {
+        flex-direction: column;
+      }
+
+      .contact-form .contact-info,
+      .contact-form .send-message {
+        max-width: 100%;
+      }
+
+      .projects-container {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .skills-container {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .hero-content h1 {
+        font-size: 3rem;
+      }
+
+      .hero-content p {
+        font-size: 1.5rem;
+      }
+    }
+
+/* Enable smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Navbar Styles */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px 30px;
+  display: none; /* Hidden by default */
+  z-index: 999;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.logo-img {
+  height: 50px;
+  width: auto;
+  display: block;
+}
+
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #00ccff;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: #00ccff;
+  font-weight: 700;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #ffffff;
+    flex-direction: column;
+    width: 100%;
+    text-align: right;
+    display: none;
+    padding: 20px;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+}
+
+
+  /* Figma Embed Section */
+  #figma {
+    padding: 60px 20px;
+    background-color: #fff;
+    text-align: center; /* Centering the content */
+    animation: fadeIn 2s ease-out forwards;
+  }
+
+  #figma h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    animation: slideIn 1s ease-out forwards;
+  }
+
+  /* Styling for the iframe */
+  #figma iframe {
+    width: 100%;
+    max-width: 800px;  /* Make the iframe responsive with a max-width */
+    height: 450px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* Space between two iframes */
+    animation: scaleUp 1.5s ease-out forwards;
+  }
+
+  /* Responsive design for the iframe */
+  @media (max-width: 768px) {
+    #figma iframe {
+      max-width: 100%;  /* Allow iframe to scale to full width on smaller screens */
+      height: 300px;    /* Adjust height on smaller screens */
+    }
+  }
+
+  /* Animation for fadeIn and scaleUp */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes scaleUp {
+    from {
+      transform: scale(0.8);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+
+
+        /* Introduction Section */
+        .introduction-section {
+            background-color: #fff;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .introduction-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            animation: slideIn 1s ease-out forwards;
+        }
+
+        .introduction-section p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            opacity: 0;
+            animation: fadeIn 1s ease-out forwards;
+            animation-delay: 1s;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(-100%);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+
+
+        .features-section {
+        background-color: #f9f9f9;
+        padding: 60px 20px;
+        text-align: center;
+    }
+
+    .features-section h2 {
+        font-size: 2.5rem;
+        margin-bottom: 40px;
+    }
+
+    .features-container {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .features-left,
+    .features-right {
+        width: 48%; /* Adjust to fit the screen */
+    }
+
+    .features-left h3,
+    .features-right h3 {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+        color: #000000;
+    }
+
+    .features-list {
+        list-style-type: none;
+        padding: 0;
+        margin-top: 20px;
+        text-align: left;
+    }
+
+    .features-list li {
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+        opacity: 0;
+        animation: fadeIn 1s ease-out forwards;
+        animation-delay: 1s;
+    }
+
+    .features-list li i {
+        font-size: 1.8rem;
+        color: #00ccff;
+        margin-right: 10px;
+    }
+
+    .features-list li span {
+        font-weight: 600;
+    }
+
+    .features-list li p {
+        font-size: 1rem;
+        color: #777;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .features-left,
+        .features-right {
+            width: 100%; /* Stack columns on smaller screens */
+        }
+    }
+
+    
+    /* Centering only the Security & Personalization heading */
+.security-personalization-title {
+    text-align: center;    /* Centers the heading */
+    margin-bottom: 20px;   /* Adds some space below the heading */
+}
+
+/* Ensure the rest of the list is left-aligned */
+.features-right .features-list {
+    text-align: left;      /* Keeps the content left-aligned */
+}
+
+
+        .screenshots-section {
+        padding: 60px 20px;
+        background-color: #fff;
+        text-align: center;
+    }
+
+    .screenshots-section h2 {
+        font-size: 2.5rem;
+        margin-bottom: 40px;
+        animation: slideIn 1s ease-out forwards;
+    }
+
+    .screenshot-gallery {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .screenshot-card {
+        background-color: #f9f9f9;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        width: 250px;  /* Set a max-width for the images */
+        text-align: center;
+    }
+
+    .screenshot-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .screenshot-image {
+        width: 100%;
+        height: auto;
+        max-width: 200px; /* Limit the max-width of images */
+        margin-bottom: 15px;
+        object-fit: cover;
+    }
+
+    .screenshot-card p {
+        font-size: 1.1rem;
+        color: #333;
+        font-weight: 600;
+    }
+
+    /* Responsive Design */
+/* Screenshots Section for Mobile View */
+@media (max-width: 768px) {
+    .screenshot-gallery {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Creates two columns */
+        gap: 20px;  /* Adds space between the images */
+        align-items: center;  /* Aligns images properly */
+    }
+
+    .screenshot-card {
+        width: 100%;  /* Makes sure each image uses the available space in the grid */
+    }
+
+    .screenshot-image {
+        max-width: 100%;  /* Ensures the images fit within the container */
+        height: auto;  /* Maintains aspect ratio */
+    }
+}
+
+
+
+    @keyframes slideIn {
+        from {
+            transform: translateX(-100%);
+        }
+        to {
+            transform: translateX(0);
+        }
+    }
+
+    
+    
+    /* From Uiverse.io by Li-Deheng */ 
+.btn-conteiner {
+  display: flex;
+  justify-content: center;
+  --color-text: #ffffff;
+  --color-background: #00ccff;
+  --color-outline: #ff145b80;
+  --color-shadow: #00000080;
+}
+
+.btn-content {
+  display: flex;
+  align-items: center;
+  padding: 5px 30px;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+  color: var(--color-text);
+  background: var(--color-background);
+  transition: 1s;
+  border-radius: 100px;
+  box-shadow: 0 0 0.2em 0 var(--color-background);
+}
+
+.btn-content:hover, .btn-content:focus {
+  transition: 0.5s;
+  -webkit-animation: btn-content 1s;
+  animation: btn-content 1s;
+  outline: 0.1em solid transparent;
+  outline-offset: 0.2em;
+  box-shadow: 0 0 0.4em 0 var(--color-background);
+}
+
+.btn-content .icon-arrow {
+  transition: 0.5s;
+  margin-right: 0px;
+  transform: scale(0.6);
+}
+
+.btn-content:hover .icon-arrow {
+  transition: 0.5s;
+  margin-right: 25px;
+}
+
+.icon-arrow {
+  width: 20px;
+  margin-left: 15px;
+  position: relative;
+  top: 6%;
+}
+  
+/* SVG */
+#arrow-icon-one {
+  transition: 0.4s;
+  transform: translateX(-60%);
+}
+
+#arrow-icon-two {
+  transition: 0.5s;
+  transform: translateX(-30%);
+}
+
+.btn-content:hover #arrow-icon-three {
+  animation: color_anim 1s infinite 0.2s;
+}
+
+.btn-content:hover #arrow-icon-one {
+  transform: translateX(0%);
+  animation: color_anim 1s infinite 0.6s;
+}
+
+.btn-content:hover #arrow-icon-two {
+  transform: translateX(0%);
+  animation: color_anim 1s infinite 0.4s;
+}
+
+/* SVG animations */
+@keyframes color_anim {
+  0% {
+    fill: white;
+  }
+
+  50% {
+    fill: var(--color-background);
+  }
+
+  100% {
+    fill: white;
+  }
+}
+
+/* Button animations */
+@-webkit-keyframes btn-content {
+  0% {
+    outline: 0.2em solid var(--color-background);
+    outline-offset: 0;
+  }
+}
+
+@keyframes btn-content {
+  0% {
+    outline: 0.2em solid var(--color-background);
+    outline-offset: 0;
+  }
+}
+/* Loading Animation */
+#page {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0); /* Full black background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;  /* Ensures it stays on top */
+  opacity: 1; /* Set initial opacity to 1 */
+  transition: opacity 1s ease-out, visibility 1s ease-out; /* Smooth transition */
+  visibility: visible; /* Make it visible initially */
+}
+
+/* For the loading ring and text */
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+#h3 {
+  color: rgb(82, 79, 79);
+  font-size: 24px;
+}
+
+#ring {
+  width: 190px;
+  height: 190px;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  position: absolute;
+}
+
+#ring:nth-child(1) {
+  border-bottom: 8px solid rgb(240, 42, 230);
+  animation: rotate1 5s linear infinite;
+}
+
+@keyframes rotate1 {
+  from {
+    transform: rotateX(50deg) rotateZ(110deg);
+  }
+  to {
+    transform: rotateX(50deg) rotateZ(470deg);
+  }
+}
+
+#ring:nth-child(2) {
+  border-bottom: 8px solid rgb(240, 19, 67);
+  animation: rotate2 5s linear infinite;
+}
+
+@keyframes rotate2 {
+  from {
+    transform: rotateX(20deg) rotateY(50deg) rotateZ(20deg);
+  }
+  to {
+    transform: rotateX(20deg) rotateY(50deg) rotateZ(380deg);
+  }
+}
+
+#ring:nth-child(3) {
+  border-bottom: 8px solid rgb(3, 170, 170);
+  animation: rotate3 5s linear infinite;
+}
+
+@keyframes rotate3 {
+  from {
+    transform: rotateX(40deg) rotateY(130deg) rotateZ(450deg);
+  }
+  to {
+    transform: rotateX(40deg) rotateY(130deg) rotateZ(90deg);
+  }
+}
+
+#ring:nth-child(4) {
+  border-bottom: 8px solid rgb(207, 135, 1);
+  animation: rotate4 5s linear infinite;
+}
+
+@keyframes rotate4 {
+  from {
+    transform: rotateX(70deg) rotateZ(270deg);
+  }
+  to {
+    transform: rotateX(70deg) rotateZ(630deg);
+  }
+}
+
+
+.prototype-video-section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.prototype-video-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+}
+
+video {
+    width: 100%;
+    max-width: 800px;  /* Adjust this value to control the size of the video */
+    border-radius: 10px;  /* Optional: gives the video rounded corners */
+}
+
+
+  </style>
+</head>
+<body>
+
+    <div id="page">
+    <div id="container">
+        <div id="ring"></div>
+        <div id="ring"></div>
+        <div id="ring"></div>
+        <div id="ring"></div>
+        <div id="h3">Loading</div>
+    </div>
+</div>
+
+  <!-- Navigation Bar -->
+<nav id="navbar" class="navbar">
+  <div class="nav-container">
+    <a href="#" class="logo">
+      <img src="LOGO.png" alt="Rakindu Logo" class="logo-img">
+    </a>
+    <div class="menu-icon" id="menu-icon">&#9776;</div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#">TechTrend</a></li>
+      <li><a href="#introduction">Introduction</a></li>
+      <li><a href="#features">Key Features</a></li>
+      <li><a href="#screenshots">App Screenshots</a></li>
+      <li><a href="#prototype-video">Prototype</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="hero-content">
+        <h1 data-aos="fade-up">TechTrend</h1>
+        <p data-aos="fade-up" data-aos-delay="500">The Ultimate E-commerce Experience for Tech Enthusiasts</p>
+        <div class="cta-btn" data-aos="fade-up" data-aos-delay="1000">
+            <div class="btn-conteiner">
+  <a class="btn-content" href="#features">
+    <span class="btn-title">Explore Features</span>
+    <span class="icon-arrow">
+      <svg width="66px" height="43px" viewBox="0 0 66 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <g id="arrow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+          <path id="arrow-icon-one" d="M40.1543933,3.89485454 L43.9763149,0.139296592 C44.1708311,-0.0518420739 44.4826329,-0.0518571125 44.6771675,0.139262789 L65.6916134,20.7848311 C66.0855801,21.1718824 66.0911863,21.8050225 65.704135,22.1989893 C65.7000188,22.2031791 65.6958657,22.2073326 65.6916762,22.2114492 L44.677098,42.8607841 C44.4825957,43.0519059 44.1708242,43.0519358 43.9762853,42.8608513 L40.1545186,39.1069479 C39.9575152,38.9134427 39.9546793,38.5968729 40.1481845,38.3998695 C40.1502893,38.3977268 40.1524132,38.395603 40.1545562,38.3934985 L56.9937789,21.8567812 C57.1908028,21.6632968 57.193672,21.3467273 57.0001876,21.1497035 C56.9980647,21.1475418 56.9959223,21.1453995 56.9937605,21.1432767 L40.1545208,4.60825197 C39.9574869,4.41477773 39.9546013,4.09820839 40.1480756,3.90117456 C40.1501626,3.89904911 40.1522686,3.89694235 40.1543933,3.89485454 Z" fill="#FFFFFF"></path>
+          <path id="arrow-icon-two" d="M20.1543933,3.89485454 L23.9763149,0.139296592 C24.1708311,-0.0518420739 24.4826329,-0.0518571125 24.6771675,0.139262789 L45.6916134,20.7848311 C46.0855801,21.1718824 46.0911863,21.8050225 45.704135,22.1989893 C45.7000188,22.2031791 45.6958657,22.2073326 45.6916762,22.2114492 L24.677098,42.8607841 C24.4825957,43.0519059 24.1708242,43.0519358 23.9762853,42.8608513 L20.1545186,39.1069479 C19.9575152,38.9134427 19.9546793,38.5968729 20.1481845,38.3998695 C20.1502893,38.3977268 20.1524132,38.395603 20.1545562,38.3934985 L36.9937789,21.8567812 C37.1908028,21.6632968 37.193672,21.3467273 37.0001876,21.1497035 C36.9980647,21.1475418 36.9959223,21.1453995 36.9937605,21.1432767 L20.1545208,4.60825197 C19.9574869,4.41477773 19.9546013,4.09820839 20.1480756,3.90117456 C20.1501626,3.89904911 20.1522686,3.89694235 20.1543933,3.89485454 Z" fill="#FFFFFF"></path>
+          <path id="arrow-icon-three" d="M0.154393339,3.89485454 L3.97631488,0.139296592 C4.17083111,-0.0518420739 4.48263286,-0.0518571125 4.67716753,0.139262789 L25.6916134,20.7848311 C26.0855801,21.1718824 26.0911863,21.8050225 25.704135,22.1989893 C25.7000188,22.2031791 25.6958657,22.2073326 25.6916762,22.2114492 L4.67709797,42.8607841 C4.48259567,43.0519059 4.17082418,43.0519358 3.97628526,42.8608513 L0.154518591,39.1069479 C-0.0424848215,38.9134427 -0.0453206733,38.5968729 0.148184538,38.3998695 C0.150289256,38.3977268 0.152413239,38.395603 0.154556228,38.3934985 L16.9937789,21.8567812 C17.1908028,21.6632968 17.193672,21.3467273 17.0001876,21.1497035 C16.9980647,21.1475418 16.9959223,21.1453995 16.9937605,21.1432767 L0.15452076,4.60825197 C-0.0425130651,4.41477773 -0.0453986756,4.09820839 0.148075568,3.90117456 C0.150162624,3.89904911 0.152268631,3.89694235 0.154393339,3.89485454 Z" fill="#FFFFFF"></path>
+        </g>
+      </svg>
+    </span> 
+  </a>
+</div>
+        </div>
+    </div>
+</section>
+
+<!-- Introduction Section -->
+<section id="introduction" class="introduction-section">
+    <h2>Introduction to TechTrend's E-commerce App</h2>
+    <p>The TechTrend e-commerce platform represents an exciting new approach to online shopping, combining the latest advancements in User Interface (UI) and User Experience (UX) design to deliver a seamless and engaging shopping experience. As a UI/UX designer at MadZoo Digital, my role in creating TechTrend's platform is pivotal. TechTrend specializes in the sale of cutting-edge electronic gadgets and accessories, and the challenge lies in designing a platform that can not only handle high volumes of transactions but also ensure a pleasant and intuitive shopping experience.<br>This introduction aims to explore the significance of UI/UX design in shaping TechTrend's e-commerce platform, emphasizing the core elements of user-centered design, usability, accessibility, and customer satisfaction. As we delve into the creation of the platform, it becomes clear that every design choice, from navigation to visuals, plays a crucial role in how users interact with and ultimately trust the platform. The objective is to develop an interface that enhances user engagement, boosts conversion rates, and promotes a smooth, enjoyable shopping journey.</p>
+    <h2>Understanding the E-commerce Landscape and the Role of UI/UX Design</h2>
+    <p>The e-commerce landscape has evolved dramatically in recent years, with consumers increasingly demanding personalized and streamlined shopping experiences. In this highly competitive market, businesses must focus not only on the products they offer but also on how users interact with their websites and apps. According to recent studies, user experience has become one of the most important factors in determining the success of an e-commerce platform. As shopping moves online, customers expect websites to be fast, intuitive, and aesthetically pleasing.UI design refers to the look and feel of the website or app, including its layout, colors, fonts, and navigation. It encompasses how a product is presented and how the user can interact with it. A well-designed UI is visually appealing and makes it easy for users to complete their tasks, such as browsing products, adding them to their cart, and completing the checkout process.UX design, on the other hand, focuses on the overall experience of the user, ensuring that the website or app is easy to navigate, functions smoothly, and provides users with what they need quickly and efficiently. A good UX design improves user satisfaction and encourages customer loyalty by ensuring a hassle-free, enjoyable experience.In the case of TechTrend, these two elements, UI and UX, work hand in hand to ensure that the platform meets the needs of its target audience while offering a memorable experience that keeps users coming back.</p>
+    <h2>TechTrend's Target Audience and Their Expectations</h2>
+    <p>TechTrend’s target audience consists of tech enthusiasts, early adopters, and gadget lovers who expect to find the latest electronics and accessories. These users are often looking for specific features such as ease of use, fast browsing, and intuitive design that caters to their specific needs. The design of the TechTrend platform must take into account the following<br><br> <b>User Demographics</b><br> Tech-savvy individuals between the ages of 18-45, primarily located in urban areas, with a high affinity for technology and innovation. <br><b>Tech-savvy Customers</b><br> The audience expects an advanced yet simple platform that doesn’t require much learning. They desire platforms that are quick, responsive, and offer an immersive shopping experience. <br><b>Speed and Efficiency</b><br> E-commerce platforms must load quickly, and actions like adding products to the cart, checking out, and making payments should be instantaneous. Users are not patient with slow websites.<br><b>Personalization</b><br> Users expect personalized experiences based on their previous shopping behavior, preferences, and interests. This could include recommendations and personalized product suggestions based on browsing history and previous purchases.By understanding these user behaviors and expectations, the UI/UX design for TechTrend can be optimized to deliver a user-centered experience that appeals to the platform’s target audience and keeps them engaged.</p>
+    <h2>Core UI/UX Principles for TechTrend's E-commerce Platform</h2>
+    <p>When creating an e-commerce platform, several core principles of UI/UX design need to be applied to ensure that the website is user-friendly, efficient, and appealing. These principles include:<br><b>Clarity</b><br> The platform should present information in a clear, easy-to-understand manner. The user should never be confused about what actions they need to take.<br><b>Simplicity</b><br> The design should be minimalistic, with simple navigation paths, concise text, and clear images. The goal is to make the user's journey as straightforward as possible.<br><b>Accessibility</b><br>  Ensuring that all users, regardless of ability or device, can access the platform is crucial. This includes providing keyboard accessibility, screen reader support, and high contrast for users with visual impairments.<br><b>Consistency</b><br> All aspects of the platform should be uniform in design, from buttons to typography. This consistency fosters a sense of familiarity, making the platform easier to navigate.<br><b>Responsiveness</b><br> The platform must be responsive and adapt seamlessly across different devices and screen sizes, whether the user is on a mobile device, tablet, or desktop.</p>
+    <h2>The Process of Designing TechTrend’s E-commerce App</h2>
+    <p>To create a seamless user experience, the design of TechTrend’s platform follows a User-Centered Design (UCD) methodology, which focuses on involving users in every step of the design process. This includes gathering feedback at every stage to ensure that the platform meets their needs. The process can be broken down into the following steps<br><br><b>User Research and Personas </b><br>The first step is to conduct user research, including surveys, interviews, and competitive analysis, to understand the behaviors, goals, and pain points of the target audience. The research helps create user personas, which represent the typical users of the platform. These personas guide the design process and ensure that the platform meets the needs of the real users.<br><b>Wireframing and Prototyping </b><br>Once the personas are created, the next step is to design wireframes and prototypes. Wireframes are basic sketches of the layout and structure of the website, focusing on functionality and user flow. Prototypes are interactive versions of the wireframes that allow designers to simulate the experience and gather feedback from users.<br><b>Visual Design </b><br>After testing wireframes and prototypes, the visual design phase begins. This includes choosing the color palette, typography, and iconography that align with TechTrend’s brand identity. The visual design is built upon the wireframes to create a polished, visually appealing interface.<br><b>Usability Testing </b><br>Once the platform is designed, usability testing is conducted to identify potential usability issues. During this phase, real users interact with the platform and provide feedback on the layout, functionality, and overall experience. The feedback is then used to make iterative improvements to the design.<br><b>Final Design and Development </b><br>After refining the design based on feedback, the final UI/UX design is handed off to developers who will implement the design into the actual website or app. During this phase, collaboration between designers and developers is crucial to ensure that the platform is built according to the design specifications.<br><b>Launch and Post-Launch Evaluation </b><br>After the platform is launched, it is important to continue gathering user feedback and analytics to ensure that the design is achieving its goals. Post-launch evaluation helps identify areas for further improvement and optimization.</p><br>
+    <p>In conclusion, the TechTrend e-commerce platform is a carefully designed product that merges UI/UX design principles to create an intuitive, user-friendly, and engaging shopping experience. Through a user-centered design methodology, every design decision is driven by the need to satisfy user goals, reduce friction, and provide an enjoyable, seamless experience. The platform’s visual appeal, functionality, and personalized features aim to make shopping easy, efficient, and fun for TechTrend’s customers. By focusing on usability, accessibility, and customer satisfaction, TechTrend is positioned to become a leading platform in the highly competitive world of e-commerce.</p>
+</section>
+
+<!-- Key Features Section -->
+<section id="features" class="features-section">
+    <h2>Key Features</h2>
+    <div class="features-container">
+        <!-- Left Column -->
+        <div class="features-left">
+            <h3>User Experience</h3>
+            <ul class="features-list">
+                <li data-aos="fade-up">
+                    <i class="fas fa-user-circle"></i> <span>User Authentication (Login & Signup)</span>
+                    <p>Secure login and registration with social media options for a personalized experience.</p>
+                </li>
+                <li data-aos="fade-up" data-aos-delay="500">
+                    <i class="fas fa-search"></i> <span>Product Search & Filters</span>
+                    <p>Filter products by categories, price range, and ratings with auto-suggestions and recently viewed items.</p>
+                </li>
+                <li data-aos="fade-up" data-aos-delay="1000">
+                    <i class="fas fa-star"></i> <span>Product Reviews & Ratings</span>
+                    <p>User-generated reviews to assist others in making informed purchase decisions.</p>
+                </li>
+                <li data-aos="fade-up" data-aos-delay="1500">
+                    <i class="fas fa-cart-plus"></i> <span>Add to Cart & Wishlist</span>
+                    <p>Easily add products to cart or wishlist with live product availability and delivery details.</p>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Right Column -->
+        <div class="features-right">
+            <h3>Shopping Experience</h3>
+            <ul class="features-list">
+                <li data-aos="fade-up" data-aos-delay="2000">
+                    <i class="fas fa-bell"></i> <span>Real-Time Notifications</span>
+                    <p>Receive alerts about order status, price drops, new arrivals, and exclusive deals.</p>
+                </li>
+                <li data-aos="fade-up" data-aos-delay="2500">
+                    <i class="fas fa-credit-card"></i> <span>Multiple Payment Methods</span>
+                    <p>Credit cards, PayPal, and mobile wallet options for seamless payments.</p>
+                </li>
+                <li data-aos="fade-up" data-aos-delay="3000">
+                    <i class="fas fa-truck"></i> <span>Order Tracking</span>
+                    <p>Track your order in real-time, view shipping updates, and get estimated delivery times.</p>
+                </li>
+                <li data-aos="fade-up" data-aos-delay="3500">
+                    <i class="fas fa-gift"></i> <span>Gift Cards & Vouchers</span>
+                    <p>Buy and redeem gift cards and discount vouchers for a personalized shopping experience.</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Second Row for Remaining Features -->
+    <div class="features-container">
+        <!-- Left Column -->
+        <div class="features-left">
+            <h3>Advanced Features</h3>
+            <ul class="features-list">
+                <li data-aos="fade-up" data-aos-delay="5000">
+                    <i class="fas fa-camera"></i> <span>Interactive Product Demos</span>
+                    <p>Try AR features or view 360° product demos before purchasing.</p>
+                </li>
+                <li data-aos="fade-up" data-aos-delay="5500">
+                    <i class="fas fa-share-alt"></i> <span>Social Sharing & Recommendations</span>
+                    <p>Share products with friends via social media or recommend items directly to contacts.</p>
+                </li>
+                <li data-aos="fade-up" data-aos-delay="6000">
+                    <i class="fas fa-sort"></i> <span>Advanced Sorting Options</span>
+                    <p>Sort products by price, ratings, and newest items for quick decision-making.</p>
+                </li>
+                <li data-aos="fade-up" data-aos-delay="6500">
+                    <i class="fas fa-map-marker-alt"></i> <span>Store Locator</span>
+                    <p>Find nearby stores or authorized partners and view operating hours and contact details.</p>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Right Column -->
+        <div class="features-right">
+            <h3>International Features</h3>
+            <ul class="features-list">
+                <li data-aos="fade-up" data-aos-delay="7000">
+                    <i class="fas fa-globe"></i> <span>Multi-Language & Multi-Currency Support</span>
+                    <p>Choose your preferred language and currency for an international shopping experience.</p>
+                </li>
+                <li data-aos="fade-up" data-aos-delay="7500">
+                    <i class="fas fa-cogs"></i> <span>Loyalty & Rewards Program</span>
+                    <p>Earn points for every purchase and redeem them for discounts and exclusive offers.</p>
+                </li>
+                <li data-aos="fade-up" data-aos-delay="8000">
+                    <i class="fas fa-newspaper"></i> <span>Integrated Blog for Tech Trends</span>
+                    <p>Stay updated with the latest tech trends, product reviews, and gadget news.</p>
+                </li>
+                <li data-aos="fade-up" data-aos-delay="8500">
+                    <i class="fas fa-cogs"></i> <span>Augmented Reality (AR) Shopping</span>
+                    <p>Visualize products in your space before making a purchase using AR technology.</p>
+                </li>
+            </ul>
+        </div>
+
+            <!-- Security & Personalization Section -->
+<div class="features-right">
+    <h3 class="security-personalization-title">Security & Personalization</h3>
+    <ul class="features-list">
+        <li data-aos="fade-up" data-aos-delay="4000">
+            <i class="fas fa-shield-alt"></i> <span>Dynamic Pricing & Discounts</span>
+            <p>Get personalized discounts and price drops based on your browsing history.</p>
+        </li>
+        <li data-aos="fade-up" data-aos-delay="4500">
+            <i class="fas fa-headset"></i> <span>Customer Support Chat</span>
+            <p>In-app chat with AI-driven chatbots or live agents for fast assistance.</p>
+        </li>
+    </ul>
+</div>
+    </div>
+</section>
+
+
+
+
+<!-- App Screenshots Section -->
+<section id="screenshots" class="screenshots-section">
+    <h2>App Screenshots</h2>
+    <div class="screenshot-gallery">
+        <div class="screenshot-card">
+            <img src="iPhone 16 Pro Max - 1.jpg" alt="TechTrend Home Screen" class="screenshot-image">
+            <p>Loading Screen</p>
+        </div>
+        <div class="screenshot-card">
+            <img src="iPhone 16 Pro Max - 2.jpg" alt="TechTrend Home Screen" class="screenshot-image">
+            <p>Welcome Screen</p>
+        </div>
+        <div class="screenshot-card">
+            <img src="iPhone 16 Pro Max - 7.jpg" alt="TechTrend Home Screen" class="screenshot-image">
+            <p>Login Screen</p>
+        </div>
+        <div class="screenshot-card">
+            <img src="iPhone 16 Pro Max - 23.jpg" alt="TechTrend Home Screen" class="screenshot-image">
+            <p>Login Success Screen</p>
+        </div>
+        <div class="screenshot-card">
+            <img src="iPhone 16 Pro Max - 6.jpg" alt="TechTrend Home Screen" class="screenshot-image">
+            <p>Password Reset Screen</p>
+        </div>
+        <div class="screenshot-card">
+            <img src="iPhone 16 Pro Max - 5.jpg" alt="TechTrend Home Screen" class="screenshot-image">
+            <p>Signup Screen</p>
+        </div>
+        <div class="screenshot-card">
+            <img src="iPhone 16 Pro Max - 16.jpg" alt="TechTrend Product Page" class="screenshot-image">
+            <p>Signup From Page</p>
+        </div>
+        <div class="screenshot-card">
+            <img src="iPhone 16 Pro Max - 27.jpg" alt="TechTrend Checkout Page" class="screenshot-image">
+            <p>Login with Google Account Page</p>
+        </div>
+        <div class="screenshot-card">
+            <img src="iPhone 16 Pro Max - 29.jpg" alt="TechTrend Checkout Page" class="screenshot-image">
+            <p>Login with Facebook Account Page</p>
+        </div>
+        <div class="screenshot-card">
+            <img src="iPhone 16 Pro Max - 32.jpg" alt="TechTrend Checkout Page" class="screenshot-image">
+            <p>Login with Apple Account Page</p>
+        </div>
+        <div class="screenshot-card">
+            <img src="iPhone 16 Pro Max - 4.jpg" alt="TechTrend Checkout Page" class="screenshot-image">
+            <p>Home Page</p>
+        </div>
+        <div class="screenshot-card">
+            <img src="iPhone 16 Pro Max - 34.jpg" alt="TechTrend Checkout Page" class="screenshot-image">
+            <p>Search Page</p>
+        </div>
+        <div class="screenshot-card">
+            <img src="iPhone 16 Pro Max - 35.jpg" alt="TechTrend Checkout Page" class="screenshot-image">
+            <p>Categories Page</p>
+        </div>
+        <div class="screenshot-card">
+            <img src="iPhone 16 Pro Max - 17.jpg" alt="TechTrend Checkout Page" class="screenshot-image">
+            <p>QR Scanner Page</p>
+        </div>
+        <div class="screenshot-card">
+            <img src="iPhone 16 Pro Max - 14.jpg" alt="TechTrend Checkout Page" class="screenshot-image">
+            <p>Notifications Page</p>
+        </div>
+        <div class="screenshot-card">
+            <img src="iPhone 16 Pro Max - 15.jpg" alt="TechTrend Checkout Page" class="screenshot-image">
+            <p>Messages Page</p>
+        </div>
+        <div class="screenshot-card">
+            <img src="iPhone 16 Pro Max - 8.jpg" alt="TechTrend Checkout Page" class="screenshot-image">
+            <p>User Account Page</p>
+        </div>
+        <div class="screenshot-card">
+            <img src="iPhone 16 Pro Max - 21.jpg" alt="TechTrend Checkout Page" class="screenshot-image">
+            <p>Settings Page</p>
+        </div>
+        <div class="screenshot-card">
+            <img src="iPhone 16 Pro Max - 12.jpg" alt="TechTrend Checkout Page" class="screenshot-image">
+            <p>Cart Page</p>
+        </div>
+        <div class="screenshot-card">
+            <img src="iPhone 16 Pro Max - 11.jpg" alt="TechTrend Checkout Page" class="screenshot-image">
+            <p>Checkout Page</p>
+        </div>
+        <div class="screenshot-card">
+            <img src="iPhone 16 Pro Max - 37.jpg" alt="TechTrend Checkout Page" class="screenshot-image">
+            <p>Loading Page</p>
+        </div>
+        <div class="screenshot-card">
+            <img src="iPhone 16 Pro Max - 22.jpg" alt="TechTrend Checkout Page" class="screenshot-image">
+            <p>Payment Successful Page</p>
+        </div>
+        <div class="screenshot-card">
+            <img src="iPhone 16 Pro Max - 18.jpg" alt="TechTrend Checkout Page" class="screenshot-image">
+            <p>Order Confirmation & Order Status Page</p>
+        </div>
+        <div class="screenshot-card">
+            <img src="iPhone 16 Pro Max - 19.jpg" alt="TechTrend Checkout Page" class="screenshot-image">
+            <p>Order Cancellation Page</p>
+        </div>
+        <div class="screenshot-card">
+            <img src="iPhone 16 Pro Max - 20.jpg" alt="TechTrend Checkout Page" class="screenshot-image">
+            <p>Order Traking Page</p>
+        </div>
+        <div class="screenshot-card">
+            <img src="iPhone 16 Pro Max - 10.jpg" alt="TechTrend Checkout Page" class="screenshot-image">
+            <p>Product Page 01</p>
+        </div>
+        <div class="screenshot-card">
+            <img src="iPhone 16 Pro Max - 33.jpg" alt="TechTrend Checkout Page" class="screenshot-image">
+            <p>Product Page 02</p>
+        </div>
+        <div class="screenshot-card">
+            <img src="iPhone 16 Pro Max - 38.jpg" alt="TechTrend Checkout Page" class="screenshot-image">
+            <p>Earphones & Headphone Page</p>
+        </div>
+    </div>
+</section>
+
+<!-- Video Section for Prototype -->
+<section id="prototype-video" class="prototype-video-section">
+    <h2>Watch the Prototype</h2>
+    <div class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/mfne3iy8b4Q" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+</section>
+
+
+
+<!-- Figma Embed Section -->
+<section id="figma" class="figma-embed">
+    <h2>Explore the Prototype</h2>
+    <iframe src="https://embed.figma.com/design/qOxPxrN0djjVSwvBCW0I1j/Protltypes-Of-TechTrend-70793?node-id=0-1&embed-host=share" allowfullscreen></iframe>
+</section>
+
+
+<section id="resume" class="resume-section">
+    <div class="section-title">
+      <h2>Download My Resume</h2>
+      <p>Interested in working with me? Get a copy of my latest resume below.</p>
+      <a href="Rakindu Fernando Resume.pdf" class="resume-btn" download>
+        <i class="fas fa-download"></i> Download Resume (PDF)
+      </a>
+    </div>
+  </section>
+  
+
+<!-- Contact Section -->
+<section id="contact" class="contact-section">
+  <div class="section-title">
+    <h2>Contact</h2>
+  </div>
+  <div class="contact-form">
+    <!-- Contact Info Section -->
+    <div class="contact-info">
+      <p><i class="fas fa-envelope"></i><strong>Email:</strong> rakindufernando@gmail.com</p>
+      <p><i class="fas fa-phone-alt"></i><strong>Phone:</strong> 0712009223/0722009223</p>
+      <p><i class="fab fa-linkedin"></i><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/rakindu-fernando-78a665233" target="_blank">linkedin.com/in/rakindu-fernando-78a665233</a></p>
+      <p><i class="fas fa-map-marker-alt"></i><strong>Location:</strong> Sri Lanka</p>
+    </div>
+
+    <!-- Send Message Form -->
+    <form action="https://script.google.com/macros/s/AKfycbxANroPHXgJ5jzlWNfYzby1aUhH7neGCMiGYDdhrJA/dev" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <input type="text" name="subject" placeholder="Subject" required>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+  </form>
+  
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- Footer Section -->
+<footer class="footer">
+  <div class="footer-content">
+    <h2>Weerahannadige Rakindu Nirmal Fernando</h2>
+    <p>UI/UX Designer | Software Engineering Student</p>
+    <div class="social-links">
+      <a href="https://github.com/rakindufernando" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/rakindu-fernando-78a665233" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://www.instagram.com/_rakinduu_/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://web.facebook.com/rakindu.fernando" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.youtube.com/@rakistudios" target="_blank"><i class="fab fa-youtube"></i></a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Rakindu Fernando. All rights reserved. Design and Developed by RAKI STUDIOS</p>
+  </div>
+</footer>
+
+
+  <!-- AOS Animation Library -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      offset: 200,
+    });
+
+
+  // Show navbar after scrolling the hero section
+  window.addEventListener('scroll', function () {
+    const navbar = document.getElementById('navbar');
+    const heroHeight = document.querySelector('.hero-section').offsetHeight;
+
+    if (window.scrollY > heroHeight - 60) {
+      navbar.style.display = 'block';
+    } else {
+      navbar.style.display = 'none';
+    }
+  });
+
+  // Toggle mobile nav
+  const menuIcon = document.getElementById('menu-icon');
+  const navLinks = document.getElementById('nav-links');
+
+  menuIcon.addEventListener('click', function () {
+    navLinks.classList.toggle('open');
+  });
+
+  // Close nav when a link is clicked (mobile)
+  document.querySelectorAll('#nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+    });
+  });
+
+  // Smooth show/hide navbar after scrolling hero section
+window.addEventListener('scroll', function () {
+  const navbar = document.getElementById('navbar');
+  const heroHeight = document.querySelector('.hero-section').offsetHeight;
+
+  if (window.scrollY > heroHeight - 60) {
+    navbar.classList.add('show');
+  } else {
+    navbar.classList.remove('show');
+  }
+});
+
+  window.onload = function() {
+    setTimeout(function() {
+      // Start fading out the loading screen
+      document.getElementById("page").style.opacity = "0";  // Reduce opacity to 0
+      document.getElementById("page").style.visibility = "hidden";  // Make it invisible
+    }, 750);  // Delay of 5 seconds (adjustable based on your needs)
+  };
+  </script>
+</body>
+</html>
