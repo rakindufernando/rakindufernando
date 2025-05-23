@@ -1044,13 +1044,306 @@ html {
   z-index: 1;
 }
 
+/* --- Chatbot Toggle Button --- */
+#chat-toggle {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #00ccff, #009bb2);
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(0, 204, 255, 0.6);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  color: white;
+  z-index: 1001;
+  animation: pulse 2s infinite;
+  transition: transform 0.3s ease;
+}
 
+#chat-toggle:hover {
+  transform: scale(1.1);
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(0, 204, 255, 0.7); }
+  70% { box-shadow: 0 0 0 15px rgba(0, 204, 255, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(0, 204, 255, 0); }
+}
+
+/* --- Chatbot Container --- */
+#chatbot-wrapper {
+  position: fixed;
+  bottom: 100px;
+  right: 30px;
+  width: 360px;
+  max-height: 550px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  overflow: hidden;
+  transform: translateY(100%);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s ease;
+}
+
+#chatbot-wrapper.active {
+  transform: translateY(0%);
+  opacity: 1;
+  pointer-events: auto;
+  animation: slideIn 0.4s ease;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* --- Chat Container Styling --- */
+.chat-container {
+  font-family: 'Outfit', sans-serif;
+  background: linear-gradient(to right, #ffffff, #f7fcff);
+  border-radius: 16px;
+}
+
+/* --- Chat Header --- */
+.chat-header {
+  background: linear-gradient(135deg, #00ccff, #009bb2);
+  color: white;
+  padding: 16px 20px;
+  font-size: 18px;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* --- Message Area --- */
+.chat-messages {
+  height: 320px;
+  padding: 16px;
+  background: #fdfdfd;
+  overflow-y: auto;
+  border-bottom: 1px solid #eaeaea;
+  scroll-behavior: smooth;
+}
+
+/* --- Message Bubbles --- */
+.message-wrapper {
+  margin-bottom: 16px;
+}
+
+.message-label {
+  font-size: 12px;
+  font-weight: bold;
+  color: #777;
+  margin-bottom: 5px;
+  padding: 0 6px;
+}
+
+.message {
+  margin: 0;
+  padding: 12px 16px;
+  border-radius: 16px;
+  max-width: 80%;
+  display: inline-block;
+  line-height: 1.5;
+  font-size: 15px;
+  word-wrap: break-word;
+  animation: fadeInMessage 0.3s ease;
+}
+
+.message.user {
+  background-color: #e0f7fa;
+  color: #333;
+  margin-left: auto;
+  text-align: right;
+}
+
+.message.bot {
+  background-color: #00ccff;
+  color: white;
+  margin-right: auto;
+  text-align: left;
+}
+
+@keyframes fadeInMessage {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- Input Area --- */
+.chat-input {
+  background: #fff;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-top: 1px solid #eee;
+}
+
+.chat-input input {
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  outline: none;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.chat-input input:focus {
+  border-color: #00ccff;
+  box-shadow: 0 0 0 3px rgba(0, 204, 255, 0.2);
+}
+
+/* --- Send Button --- */
+.chat-input button {
+  background: linear-gradient(135deg, #00ccff, #009bb2);
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  font-size: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  align-self: flex-end;
+}
+
+.chat-input button:hover {
+  background: #00b3db;
+  transform: scale(1.05);
+}
+
+/* --- Suggestion Box --- */
+#suggestionBox {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  max-height: 150px;
+  overflow-y: auto;
+  display: none;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.07);
+  animation: fadeInBox 0.3s ease;
+}
+
+#suggestionBox div {
+  padding: 10px 14px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #333;
+  border-bottom: 1px solid #eee;
+  transition: background 0.2s ease;
+}
+
+#suggestionBox div:hover {
+  background: #f0f8ff;
+}
+
+@keyframes fadeInBox {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 
 
   </style>
 </head>
 <body>
 
+<!-- Chat Toggle Button -->
+<div id="chat-toggle" onclick="toggleChatbot()">
+  <i class="fas fa-comment-dots"></i>
+</div>
+
+<!-- Chatbot Container -->
+<div id="chatbot-wrapper" onclick="event.stopPropagation()">
+<div class="chat-container" style="font-family: 'Outfit', sans-serif;">
+  <div class="chat-header" style="
+    background: linear-gradient(135deg, #00ccff, #009bb2);
+    color: white;
+    padding: 15px 20px;
+    font-size: 18px;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  ">
+    <span>Chat with Rakindu's Bot</span>
+    <span style="font-size: 20px;">🤖</span>
+  </div>
+
+  <div class="chat-messages" id="messages" style="
+    height: 320px;
+    overflow-y: auto;
+    background: #fdfdfd;
+    padding: 15px;
+    font-size: 15px;
+    border-bottom: 1px solid #e0e0e0;
+  "></div>
+
+  <div class="chat-input" style="
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    gap: 8px;
+    background: #fff;
+  ">
+    <input type="text" id="userInput" placeholder="Ask a question..." autocomplete="off" style="
+      padding: 12px 14px;
+      font-size: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      outline: none;
+    "/>
+
+    <div id="suggestionBox" style="
+      max-height: 120px;
+      overflow-y: auto;
+      background: #fff;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      display: none;
+      font-size: 14px;
+    "></div>
+
+    <button onclick="sendMessage()" style="
+      background: #00ccff;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      font-size: 15px;
+      border-radius: 8px;
+      cursor: pointer;
+      align-self: flex-end;
+    ">Send</button>
+  </div>
+</div>
+
+</div>
+</div>
 
   
 
@@ -1874,6 +2167,378 @@ window.addEventListener('load', function () {
     });
   });
 
+   const qaPairs = {
+        "What is your full name?": "My full name is Weerahannadige Rakindu Nirmal Fernando.",
+        "What is your birth date?": "I was born on January 27, 2004.",
+        "Where were you born?": "I was born in Sri Lanka.",
+        "What is your NIC number?": "My NIC number is 200402700294.",
+        "What is your religion?": "I am a Roman Catholic.",
+        "What is your current marital status?": "I am currently single.",
+        "What is your current address?": "I live at 15/2 Lady Evelyn De Soysa Road, Idama, Moratuwa.",
+        "How can someone contact you via email?": "They can email me at rakindufernando@gmail.com.",
+        "What are your mobile numbers?": "My mobile numbers are 0712009223 and 0722009223.",
+        "What is your LinkedIn profile URL?": "It’s https://www.linkedin.com/in/rakindu-fernando-78a665233.",
+        "Where are you studying now?": "I am studying at Achievers International Campus.",
+        "What course are you following at Achievers?": "I am following the Pearson BTEC HND in Computing (Software Engineering).",
+        "What years did you attend St. Sebastian’s College?": "I studied at St. Sebastian’s College until 2022.",
+        "What subjects did you take for your A/Ls?": "I took Economics, Accounting, Business Studies, and English.",
+        "How did you perform in your O/Ls?": "I achieved 7 A passes, 1 B, and 1 C in the 2019 O/L examination.",
+        "Did you complete any certifications?": "Yes, including Microsoft Applications (2020) and Skills Plus English Course (2023).",
+        "Where did you complete your Microsoft Applications certificate?": "At Curtiss Institute of Design in MJF Charitable Foundation.",
+        "Where did you do the Skills Plus English Course?": "I completed it at the British Council Sri Lanka.",
+        "What are your areas of academic strength?": "Business, IT, and communication.",
+        "Which foundation supported your design certification?": "MJF Charitable Foundation.",
+        "Which design tools do you use?": "I use Figma, Adobe Photoshop, and Adobe Illustrator.",
+        "Which programming languages are you skilled in?": "I am skilled in HTML, CSS, Java, and JavaScript.",
+        "What software IDEs do you work with?": "I work with Visual Studio Code and NetBeans.",
+        "Which language do you primarily use for backend?": "I use Java for backend development.",
+        "What is your preferred tool for UI prototyping?": "My preferred tool is Figma.",
+        "Which Adobe tools are you skilled at?": "I am skilled in Adobe Photoshop, Illustrator, Premiere Pro, and After Effects.",
+        "What skills support your UX design work?": "Creativity, empathy, and testing knowledge.",
+        "Do you have experience with version control tools?": "Yes, I have worked with Git.",
+        "What are your communication strengths?": "I am clear, concise, and collaborative.",
+        "What design principles do you follow?": "I follow accessibility, consistency, and user-centered design.",
+        "Where did you complete your internship?": "I completed my internship at Hatton National Bank PLC.",
+        "What were your main tasks at HNB?": "I opened accounts, fixed mobile banking issues, and facilitated fund transfers.",
+        "Are you currently employed?": "No",
+        "What do you do at RAKI STUDIOS?": "I manage photography, video editing, and content creation.",
+        "What is your role at ReD Productions?": "I’m a co-founder and video editor for our YouTube channel.",
+        "What church events have you covered?": "Masses, processions, and special occasions at St. Joseph’s Church.",
+        "What social media work do you do?": "I create visual content to enhance engagement.",
+        "How long have you worked in media?": "I’ve worked in media and production since 2020.",
+        "What roles have you held in school?": "I was a scout, prefect, and art circle member.",
+        "What was your first media-related role?": "As a photographer and editor in 2020. And now Iam the Vice President of the media unit",
+        "What is your recent UI/UX project?": "An e-commerce mobile app prototype designed with Figma.",
+        "What is your major software development project?": "A Point of Sale system for a retail business.",
+        "What is your latest photography event?": "",
+        "What type of content is on ReD Productions?": "Video edits, creative storytelling, and digital visuals.",
+        "What project did you design in 2024?": "I designed the cover for the 2024 parish calendar.",
+        "What event did you cover for Princess of Wales’ College?": "The 1990 O/L and 1993 A/L Batch Purplicious Batch Party.",
+        "What was the focus of your Crowned Queens poster?": "A bold and celebratory theme for a batch party.",
+        "What church video events have you done?": "150th Jubilee and Black Sunday services.",
+        "What project features animation and effects?": "Several YouTube edits on ReD Productions.",
+        "What types of projects do you enjoy most?": "Creative ones involving UI/UX or visual storytelling.",
+        "Can you explain what is your full name?": "My full name is Weerahannadige Rakindu Nirmal Fernando.",
+        "Can you explain what is your birth date?": "I was born on January 27, 2004.",
+        "Can you explain what is your NIC number?": "My NIC number is 200402700294.",
+        "Can you explain what is your religion?": "I am a Roman Catholic.",
+        "Can you explain what is your current marital status?": "I am currently single.",
+        "Can you explain what is your current address?": "I live at 15/2 Lady Evelyn De Soysa Road, Idama, Moratuwa.",
+        "Can you explain what are your mobile numbers?": "My mobile numbers are 0712009223 and 0705506150.",
+        "Can you explain what is your LinkedIn profile URL?": "It’s https://www.linkedin.com/in/rakindu-fernando-78a665233.",
+        "Can you explain what course are you following at Achievers?": "I am following the Pearson BTEC HND in Computing (Software Engineering).",
+        "Can you explain what years did you attend St. Sebastian’s College?": "I studied at St. Sebastian’s College until 2022.",
+        "Can you explain what subjects did you take for your A/Ls?": "I took Economics, Accounting, Business Studies, and English.",
+        "Can you explain what are your areas of academic strength?": "Business, IT, and communication.",
+        "Can you explain what software IDEs do you work with?": "I work with Visual Studio Code and NetBeans.",
+        "Can you explain what is your preferred tool for UI prototyping?": "My preferred tool is Figma.",
+        "Can you explain what skills support your UX design work?": "Creativity, empathy, and testing knowledge.",
+        "Can you explain what are your communication strengths?": "I am clear, concise, and collaborative.",
+        "Can you explain what design principles do you follow?": "I follow accessibility, consistency, and user-centered design.",
+        "Can you explain what were your main tasks at HNB?": "I opened accounts, fixed mobile banking issues, and facilitated fund transfers.",
+        "Can you explain what do you do at RAKI STUDIOS?": "I manage photography, video editing, and content creation.",
+        "Can you explain what is your role at ReD Productions?": "I’m a co-founder and video editor for our YouTube channel.",
+        "Can you explain what church events have you covered?": "Masses, processions, and special occasions at St. Joseph’s Church.",
+        "Can you explain what social media work do you do?": "I create visual content to enhance engagement.",
+        "Can you explain what roles have you held in school?": "I was a scout, prefect, and art circle member.",
+        "Can you explain what was your first media-related role?": "As a photographer and editor in 2020.",
+        "Can you explain what is your recent UI/UX project?": "An e-commerce mobile app prototype designed with Figma.",
+        "Can you explain what is your major software development project?": "A Point of Sale system for a retail business.",
+        "Can you explain what is your latest photography event?": "",
+        "Can you explain what type of content is on ReD Productions?": "Video edits, creative storytelling, and digital visuals.",
+        "Can you explain what project did you design in 2024?": "I designed the cover for the 2024 parish calendar.",
+        "Can you explain what event did you cover for Princess of Wales’ College?": "The 1990 O/L and 1993 A/L Batch Purplicious Batch Party.",
+        "Can you explain what was the focus of your Crowned Queens poster?": "A bold and celebratory theme for a batch party.",
+        "Can you explain what church video events have you done?": "150th Jubilee and Black Sunday services.",
+        "Can you explain what project features animation and effects?": "Several YouTube edits on ReD Productions.",
+        "Can you explain what types of projects do you enjoy most?": "Creative ones involving UI/UX or visual storytelling.",
+        "Hi, how are you?": "I'm doing great, thank you!",
+        "Good morning!": "Good morning! Hope you have a wonderful day.",
+        "Good afternoon!": "Good afternoon! How can I assist you today?",
+        "Good evening!": "Good evening! How's your day been?",
+        "What’s up?": "Not much, just working on some creative projects.",
+        "How’s your day going?": "My day is going really well, thank you.",
+        "Can I ask you something?": "Sure! Go ahead.",
+        "Are you free to talk?": "Yes, I’m available.",
+        "Long time no see!": "Yeah, it’s been a while! Great to hear from you.",
+        "What are you doing?": "I'm currently working on some design and coding tasks.",
+        "Can we talk?": "Of course, let’s chat.",
+        "Hello!": "Hello there!",
+        "Hey!": "Hey! What’s going on?",
+        "What are your plans for today?": "I plan to work on my portfolio and edit some videos.",
+        "Can you help me?": "Absolutely! What do you need help with?",
+        "How’s the weather?": "It’s a bit warm today, but nice overall.",
+        "Are you busy?": "A little, but I always have time to talk.",
+        "What's new?": "I'm currently updating my portfolio and working on a couple of design projects.",
+        "Do you have any hobbies?": "Yes! I love photography, videography, and editing.",
+        "Can I get your advice?": "Sure! I’d be happy to give you some advice.",
+        "What is your full name?": "My full name is Weerahannadige Rakindu Nirmal Fernando.",
+        "What is your birth date?": "I was born on January 27, 2004.",
+        "Where were you born?": "I was born in Sri Lanka.",
+        "What is your NIC number?": "My NIC number is 200402700294.",
+        "What is your religion?": "I am a Roman Catholic.",
+        "What is your current marital status?": "I am currently single.",
+        "What is your current address?": "I live at 15/2 Lady Evelyn De Soysa Road, Idama, Moratuwa.",
+        "How can someone contact you via email?": "They can email me at rakindufernando@gmail.com.",
+        "What are your mobile numbers?": "My mobile numbers are 0712009223 and 0705506150.",
+        "What is your LinkedIn profile URL?": "It’s https://www.linkedin.com/in/rakindu-fernando-78a665233.",
+        "Where are you studying now?": "I am studying at Achievers International Campus.",
+        "What course are you following at Achievers?": "I am following the Pearson BTEC HND in Computing (Software Engineering).",
+        "What years did you attend St. Sebastian’s College?": "I studied at St. Sebastian’s College until 2022.",
+        "What subjects did you take for your A/Ls?": "I took Economics, Accounting, Business Studies, and English.",
+        "How did you perform in your O/Ls?": "I achieved 7 A passes, 1 B, and 1 C in the 2019 O/L examination.",
+        "Did you complete any certifications?": "Yes, including Microsoft Applications (2020) and Skills Plus English Course (2023).",
+        "Where did you complete your Microsoft Applications certificate?": "At Curtiss Institute of Design in MJF Charitable Foundation.",
+        "Where did you do the Skills Plus English Course?": "I completed it at the British Council Sri Lanka.",
+        "What are your areas of academic strength?": "Business, IT, and communication.",
+        "Which foundation supported your design certification?": "MJF Charitable Foundation.",
+        "Which design tools do you use?": "I use Figma, Adobe Photoshop, and Adobe Illustrator.",
+        "Which programming languages are you skilled in?": "I am skilled in HTML, CSS, Java, and JavaScript.",
+        "What software IDEs do you work with?": "I work with Visual Studio Code and NetBeans.",
+        "Which language do you primarily use for backend?": "I use Java for backend development.",
+        "What is your preferred tool for UI prototyping?": "My preferred tool is Figma.",
+        "Which Adobe tools are you skilled at?": "I am skilled in Adobe Photoshop, Illustrator, Premiere Pro, and After Effects.",
+        "What skills support your UX design work?": "Creativity, empathy, and testing knowledge.",
+        "Do you have experience with version control tools?": "Yes, I have worked with Git.",
+        "What are your communication strengths?": "I am clear, concise, and collaborative.",
+        "What design principles do you follow?": "I follow accessibility, consistency, and user-centered design.",
+        "Where did you complete your internship?": "I completed my internship at Hatton National Bank PLC.",
+        "What were your main tasks at HNB?": "I opened accounts, fixed mobile banking issues, and facilitated fund transfers.",
+        "Are you currently employed?": "I am working as Vice President of the Media Unit at St. Joseph's Church.",
+        "What do you do at RAKI STUDIOS?": "I manage photography, video editing, and content creation.",
+        "What is your role at ReD Productions?": "I’m a co-founder and video editor for our YouTube channel.",
+        "What church events have you covered?": "Masses, processions, and special occasions at St. Joseph’s Church.",
+        "What social media work do you do?": "I create visual content to enhance engagement.",
+        "How long have you worked in media?": "I’ve worked in media and production since 2020.",
+        "What roles have you held in school?": "I was a scout, prefect, and art circle member.",
+        "What was your first media-related role?": "As a photographer and editor in 2020.",
+        "What is your recent UI/UX project?": "An e-commerce mobile app prototype designed with Figma.",
+        "What is your major software development project?": "A Point of Sale system for a retail business.",
+        "What is your latest photography event?": "",
+        "What type of content is on ReD Productions?": "Video edits, creative storytelling, and digital visuals.",
+        "What project did you design in 2024?": "I designed the cover for the 2024 parish calendar.",
+        "What event did you cover for Princess of Wales’ College?": "The 1990 O/L and 1993 A/L Batch Purplicious Batch Party.",
+        "What was the focus of your Crowned Queens poster?": "A bold and celebratory theme for a batch party.",
+        "What church video events have you done?": "150th Jubilee and Black Sunday services.",
+        "What project features animation and effects?": "Several YouTube edits on ReD Productions.",
+        "What types of projects do you enjoy most?": "Creative ones involving UI/UX or visual storytelling.",
+        "Can you explain what is your full name?": "My full name is Weerahannadige Rakindu Nirmal Fernando.",
+        "Can you explain what is your birth date?": "I was born on January 27, 2004.",
+        "Can you explain what is your NIC number?": "My NIC number is 200402700294.",
+        "Can you explain what is your religion?": "I am a Roman Catholic.",
+        "Can you explain what is your current marital status?": "I am currently single.",
+        "Can you explain what is your current address?": "I live at 15/2 Lady Evelyn De Soysa Road, Idama, Moratuwa.",
+        "Can you explain what are your mobile numbers?": "My mobile numbers are 0712009223 and 0705506150.",
+        "Can you explain what is your LinkedIn profile URL?": "It’s https://www.linkedin.com/in/rakindu-fernando-78a665233.",
+        "Can you explain what course are you following at Achievers?": "I am following the Pearson BTEC HND in Computing (Software Engineering).",
+        "Can you explain what years did you attend St. Sebastian’s College?": "I studied at St. Sebastian’s College until 2022.",
+        "Can you explain what subjects did you take for your A/Ls?": "I took Economics, Accounting, Business Studies, and English.",
+        "Can you explain what are your areas of academic strength?": "Business, IT, and communication.",
+        "Can you explain what software IDEs do you work with?": "I work with Visual Studio Code and NetBeans.",
+        "Can you explain what is your preferred tool for UI prototyping?": "My preferred tool is Figma.",
+        "Can you explain what skills support your UX design work?": "Creativity, empathy, and testing knowledge.",
+        "Can you explain what are your communication strengths?": "I am clear, concise, and collaborative.",
+        "Can you explain what design principles do you follow?": "I follow accessibility, consistency, and user-centered design.",
+        "Can you explain what were your main tasks at HNB?": "I opened accounts, fixed mobile banking issues, and facilitated fund transfers.",
+        "Can you explain what do you do at RAKI STUDIOS?": "I manage photography, video editing, and content creation.",
+        "Can you explain what is your role at ReD Productions?": "I’m a co-founder and video editor for our YouTube channel.",
+        "Can you explain what church events have you covered?": "Masses, processions, and special occasions at St. Joseph’s Church.",
+        "Can you explain what social media work do you do?": "I create visual content to enhance engagement.",
+        "Can you explain what roles have you held in school?": "I was a scout, prefect, and art circle member.",
+        "Can you explain what was your first media-related role?": "As a photographer and editor in 2020.",
+        "Can you explain what is your recent UI/UX project?": "An e-commerce mobile app prototype designed with Figma.",
+        "Can you explain what is your major software development project?": "A Point of Sale system for a retail business.",
+        "Can you explain what is your latest photography event?": "",
+        "Can you explain what type of content is on ReD Productions?": "Video edits, creative storytelling, and digital visuals.",
+        "Can you explain what project did you design in 2024?": "I designed the cover for the 2024 parish calendar.",
+        "Can you explain what event did you cover for Princess of Wales’ College?": "The 1990 O/L and 1993 A/L Batch Purplicious Batch Party.",
+        "Can you explain what was the focus of your Crowned Queens poster?": "A bold and celebratory theme for a batch party.",
+        "Can you explain what church video events have you done?": "150th Jubilee and Black Sunday services.",
+        "Can you explain what project features animation and effects?": "Several YouTube edits on ReD Productions.",
+        "Can you explain what types of projects do you enjoy most?": "Creative ones involving UI/UX or visual storytelling.",
+        "What are the software projects you have done?": "You can explore my Software Development projects in the Projects section. Scroll is now happening automatically...",
+        "What are the photography projects you have done?": "You can explore my Photography projects in the Projects section. Scroll is now happening automatically...",
+        "What are the graphic design projects you have done?": "You can explore my Graphic Design projects in the Projects section. Scroll is now happening automatically...",
+        "What are the videography projects you have done?": "You can explore my Videography projects in the Projects section. Scroll is now happening automatically...",
+        "What are the UI/UX design projects you have done?": "You can explore my UI/UX Design projects in the Projects section. Scroll is now happening automatically...",
+        "What are the web development projects you have done?": "You can explore my Web Development projects in the Projects section. Scroll is now happening automatically...",
+
+  };
+
+  const messages = document.getElementById("messages");
+  const input = document.getElementById("userInput");
+  const suggestionBox = document.getElementById("suggestionBox");
+
+  function sendMessage() {
+    const text = input.value.trim();
+    if (!text) return;
+
+    addMessage("user", text);
+    const response = getAnswer(text);
+    addMessage("bot", response);
+    input.value = "";
+    suggestionBox.innerHTML = "";
+    suggestionBox.style.display = "none";
+  }
+
+  function addMessage(type, text) {
+    const wrapper = document.createElement("div");
+    wrapper.className = "message-wrapper " + type;
+
+    const label = document.createElement("div");
+    label.className = "message-label";
+    label.textContent = type === "user" ? "You" : "Chatbot";
+
+    const message = document.createElement("div");
+    message.className = "message " + type;
+    message.textContent = text;
+
+    wrapper.appendChild(label);
+    wrapper.appendChild(message);
+    messages.appendChild(wrapper);
+    messages.scrollTop = messages.scrollHeight;
+  }
+
+  function getAnswer(question) {
+    const qLower = question.toLowerCase();
+    for (let key in qaPairs) {
+      if (key.toLowerCase() === qLower) return qaPairs[key];
+    }
+    for (let key in qaPairs) {
+      if (key.toLowerCase().includes(qLower)) return qaPairs[key];
+    }
+    return "Sorry, I don't have an answer for that.";
+  }
+
+  input.addEventListener("input", () => {
+    const val = input.value.trim().toLowerCase();
+    suggestionBox.innerHTML = "";
+
+    if (!val) {
+      suggestionBox.style.display = "none";
+      return;
+    }
+
+    const suggestions = Object.keys(qaPairs).filter(key =>
+      key.toLowerCase().includes(val)
+    );
+
+    if (suggestions.length === 0) {
+      const noMatch = document.createElement("div");
+      noMatch.textContent = "No suggestions found";
+      suggestionBox.appendChild(noMatch);
+    } else {
+      suggestions.forEach(suggestion => {
+        const div = document.createElement("div");
+        div.textContent = suggestion;
+        div.onclick = () => {
+          input.value = suggestion;
+          suggestionBox.innerHTML = "";
+          suggestionBox.style.display = "none";
+          sendMessage();
+        };
+        suggestionBox.appendChild(div);
+      });
+    }
+
+    suggestionBox.style.display = "block";
+  });
+
+  input.addEventListener("keypress", function (e) {
+    if (e.key === "Enter") sendMessage();
+  });
+
+  function toggleChatbot() {
+    const chatbot = document.getElementById("chatbot-wrapper");
+    chatbot.classList.toggle("active");
+  }
+
+  document.body.addEventListener("click", function (e) {
+    const chatbot = document.getElementById("chatbot-wrapper");
+    const toggleBtn = document.getElementById("chat-toggle");
+
+    if (!chatbot.contains(e.target) && !toggleBtn.contains(e.target)) {
+      chatbot.classList.remove("active");
+    }
+  });
+
+
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const cards = document.querySelectorAll('.project-card[data-category="Photography"]');
+    let latestCard = null;
+    let latestDate = null;
+
+    cards.forEach(card => {
+      const dateAttr = card.getAttribute("data-date");
+      if (dateAttr) {
+        const cardDate = new Date(dateAttr);
+        if (!latestDate || cardDate > latestDate) {
+          latestDate = cardDate;
+          latestCard = card;
+        }
+      }
+    });
+
+    if (latestCard) {
+      const title = latestCard.querySelector(".project-info h3")?.textContent?.trim();
+      if (title) {
+        qaPairs["What is your latest photography event?"] = `My latest photography event is titled: "${title}".`;
+      }
+    }
+  });
+
+const projectQuestions = [
+  "What are the software projects you have done?",
+  "What are the photography projects you have done?",
+  "What are the graphic design projects you have done?",
+  "What are the videography projects you have done?",
+  "What are the UI/UX design projects you have done?",
+  "What are the web development projects you have done?"
+];
+
+  function scrollToProjectsIfMatch(questionText) {
+    const cleaned = questionText.trim().toLowerCase();
+    projectQuestions.forEach(q => {
+      if (q.toLowerCase() === cleaned) {
+        const section = document.querySelector("#projects");
+        if (section) {
+          // Custom smooth scroll
+          const targetY = section.getBoundingClientRect().top + window.scrollY;
+          const startY = window.scrollY;
+          const distance = targetY - startY;
+          const duration = 1200;
+          let start;
+
+          function animateScroll(timestamp) {
+            if (!start) start = timestamp;
+            const progress = timestamp - start;
+            const ease = progress / duration;
+            const eased = ease < 0.5
+              ? 2 * ease * ease
+              : -1 + (4 - 2 * ease) * ease;
+
+            window.scrollTo(0, startY + distance * eased);
+
+            if (progress < duration) {
+              requestAnimationFrame(animateScroll);
+            }
+          }
+
+          requestAnimationFrame(animateScroll);
+        }
+      }
+    });
+  }
+
+  // Hook into existing sendMessage (without changing it)
+  const originalSendMessage = sendMessage;
+  sendMessage = function () {
+    const text = input.value.trim();
+    if (!text) return;
+    scrollToProjectsIfMatch(text); // animated scroll
+    originalSendMessage(); // continue as normal
+  };
 
 
   </script>
