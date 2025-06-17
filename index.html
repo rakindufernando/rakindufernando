@@ -981,15 +981,14 @@ html {
   font-size: 24px;
 }
 
-#ring {
+.ring {
   width: 190px;
   height: 190px;
   border: 1px solid transparent;
   border-radius: 50%;
   position: absolute;
 }
-
-#ring:nth-child(1) {
+.ring:nth-child(1) {
   border-bottom: 8px solid rgb(240, 42, 230);
   animation: rotate1 5s linear infinite;
 }
@@ -1003,7 +1002,7 @@ html {
   }
 }
 
-#ring:nth-child(2) {
+.ring:nth-child(2) {
   border-bottom: 8px solid rgb(240, 19, 67);
   animation: rotate2 5s linear infinite;
 }
@@ -1017,7 +1016,7 @@ html {
   }
 }
 
-#ring:nth-child(3) {
+.ring:nth-child(3) {
   border-bottom: 8px solid rgb(3, 170, 170);
   animation: rotate3 5s linear infinite;
 }
@@ -1031,7 +1030,7 @@ html {
   }
 }
 
-#ring:nth-child(4) {
+.ring:nth-child(4) {
   border-bottom: 8px solid rgb(207, 135, 1);
   animation: rotate4 5s linear infinite;
 }
@@ -1365,19 +1364,17 @@ html {
       align-self: flex-end;
     ">Send</button>
   </div>
-</div>
-
-</div>
+  </div>
 </div>
 
   
 
   <div id="page">
     <div id="container">
-        <div id="ring"></div>
-        <div id="ring"></div>
-        <div id="ring"></div>
-        <div id="ring"></div>
+        <div class="ring"></div>
+        <div class="ring"></div>
+        <div class="ring"></div>
+        <div class="ring"></div>
         <div id="h3">Loading</div>
     </div>
 </div>
@@ -2040,9 +2037,8 @@ html {
       <textarea name="message" placeholder="Your Message" required></textarea>
       <button type="submit">Send Message</button>
   </form>
-  
+
     </div>
-  </div>
 </section>
 
 
