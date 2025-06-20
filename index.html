@@ -1965,10 +1965,11 @@ html {
   <!-- AOS Animation Library -->
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js" defer></script>
   <script>
-    AOS.init({
-      duration: 1000,
-      offset: 200,
-    });
+    document.addEventListener('DOMContentLoaded', function () {
+      AOS.init({
+        duration: 1000,
+        offset: 200,
+      });
 
     // Filter Projects Section
     const filterButtons = document.querySelectorAll('.filter-btn');
@@ -2466,6 +2467,8 @@ const projectQuestions = [
       img.setAttribute('loading', 'lazy');
     });
   });
+
+    });
 
 
   </script>
