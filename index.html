@@ -2173,13 +2173,14 @@ window.addEventListener('load', function () {
   });
 });
 
-  window.onload = function() {
-    setTimeout(function() {
-      // Start fading out the loading screen
-      document.getElementById("page").style.opacity = "0";  // Reduce opacity to 0
-      document.getElementById("page").style.visibility = "hidden";  // Make it invisible
-    }, 500);  // Delay of 5 seconds (adjustable based on your needs)
-  };
+  document.addEventListener('DOMContentLoaded', () => {
+    setTimeout(() => {
+      // Fade out the loading overlay shortly after DOM is ready
+      const loader = document.getElementById('page');
+      loader.style.opacity = '0';
+      loader.style.visibility = 'hidden';
+    }, 500); // hide after half a second
+  });
 
 
   document.addEventListener("DOMContentLoaded", () => {
