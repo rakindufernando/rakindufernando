@@ -2064,7 +2064,7 @@ html {
 
 
   <!-- AOS Animation Library -->
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js" defer></script>
   <script>
     AOS.init({
       duration: 1000,
@@ -2566,6 +2566,13 @@ const projectQuestions = [
     scrollToProjectsIfMatch(text); // animated scroll
     originalSendMessage(); // continue as normal
   };
+
+  // Lazy load all images to speed up initial page rendering
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('img').forEach(img => {
+      img.setAttribute('loading', 'lazy');
+    });
+  });
 
 
   </script>
