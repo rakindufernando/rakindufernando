@@ -6,20 +6,25 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Rakindu Fernando</title>
   <link rel="icon" type="image/x-icon" href="Favicon.png">
+  <link rel="preload" href="Background.jpg" as="image">
 
   <!-- AOS Animation Library -->
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="preload" href="https://unpkg.com/aos@2.3.4/dist/aos.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css"></noscript>
   
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Performance hints -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <!-- Load Font Awesome without blocking render -->
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"></noscript>
 
-  <!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Playfair+Display:wght@600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
-
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&family=Poppins:wght@500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <!-- Consolidated Google Fonts -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Playfair+Display:wght@600;700&family=Inter:wght@400;600&family=Nunito:wght@400;600&family=Poppins:wght@500;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Playfair+Display:wght@600;700&family=Inter:wght@400;600&family=Nunito:wght@400;600&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+  </noscript>
 
 
 
@@ -1385,7 +1390,7 @@ html {
 <nav id="navbar" class="navbar">
   <div class="nav-container">
     <a href="#" class="logo">
-      <img src="LOGO.png" alt="Rakindu Logo" class="logo-img">
+      <img loading="lazy" src="LOGO.png" alt="Rakindu Logo" class="logo-img">
     </a>
     <div class="menu-icon" id="menu-icon">&#9776;</div>
     <ul class="nav-links" id="nav-links">
@@ -1434,7 +1439,7 @@ html {
   </div>
   <div class="about-content">
     <div class="about-image">
-      <img src="myimage.jpg" alt="Rakindu Fernando" />
+      <img loading="lazy" src="myimage.jpg" alt="Rakindu Fernando" />
     </div>
     <div class="about-text">
       <p>I am Rakindu Fernando, a passionate Software Engineering student at IAICampus, specializing in UI/UX design and development. With a strong foundation in HTML, CSS, Java, and tools like Figma, Adobe Photoshop, Adobe Illustrator and Visual Studio Code, I strive to create seamless, user-centered digital experiences. My leadership and problem-solving skills, coupled with my experience as a vice president, photographer, editor, and live streamer, allow me to bring a creative and detail-oriented approach to every project I undertake. I have honed my skills through internships and active participation in various extracurricular activities, and I am dedicated to building a successful career in the tech industry.</p>
@@ -1556,7 +1561,7 @@ html {
           <p class="year">2023-2024</p>
         </div>
         <!-- Small Logo for Intern Experience -->
-        <img src="HNB.png" alt="HNB Logo" class="experience-logo">
+        <img loading="lazy" src="HNB.png" alt="HNB Logo" class="experience-logo">
       </div>
       <div class="experience-description">
         <p>As an Intern at Hatton National Bank PLC in 2023, I have done account and FD opening, resolved mobile banking products issues of customers to ensure smooth user experiences, and facilitated secure fund transfers between accounts, ensuring timely and efficient transactions.</p>
@@ -1572,7 +1577,7 @@ html {
           <p class="year">2021 - Present</p>
         </div>
         <!-- Small Logo for Vice President Experience -->
-        <img src="SJCLOGO.jpg" alt="Media Unit Logo" class="experience-logo">
+        <img loading="lazy" src="SJCLOGO.jpg" alt="Media Unit Logo" class="experience-logo">
       </div>
       <div class="experience-description">
         <p>As the Vice President, I oversee the operations of the Media Unit at St. Joseph's Church, Uyana, Moratuwa. I am responsible for livestreaming holy masses and church events, capturing and editing photos for events, and creating engaging visual content for social media platforms to enhance our online presence.</p>
@@ -1588,7 +1593,7 @@ html {
               <p class="year">2020 - Present</p>
             </div>
             <!-- Small Logo for Vice President Experience -->
-            <img src="RAKI STUDIOS.png" alt="Media Unit Logo" class="experience-logo">
+            <img loading="lazy" src="RAKI STUDIOS.png" alt="Media Unit Logo" class="experience-logo">
           </div>
           <div class="experience-description">
             <p>As the owner of RAKI STUDIOS, I manage and oversee all photography, video editing, and content creation activities. I capture and edit photos for various events, produce and edit videos, and create engaging visual content for social media to promote the brands and its services.</p>
@@ -1604,7 +1609,7 @@ html {
           <p class="year">2020 - Present</p>
         </div>
         <!-- Small Logo for Editor Experience -->
-        <img src="RED.jpg" alt="ReD Productions Logo" class="experience-logo">
+        <img loading="lazy" src="RED.jpg" alt="ReD Productions Logo" class="experience-logo">
       </div>
       <div class="experience-description">
         <p>As a co-founder of ReD Productions, I am responsible for editing and producing video content, creating visual effects, recording videos, and handling channel branding and visual identity. I work closely with the team to develop content that aligns with the brand’s vision and engages our audience effectively.</p>
@@ -1634,7 +1639,7 @@ html {
     </div>
     <div class="projects-container">
       <div class="project-card" data-category="UI/UX Design" data-date="2025-03-02">
-        <img src="E-commerce Mobile Application.jpg" alt="E-commerce Mobile Application">
+        <img loading="lazy" src="E-commerce Mobile Application.jpg" alt="E-commerce Mobile Application">
         <div class="project-info">
           <h3>E-commerce Mobile Application</h3>
           <p>In my 4th semester UI/UX module at IAICampus, I designed an interactive e-commerce mobile app prototype for TechTrend using Figma, focusing on user-centered design and refining the interface through user testing.          </p>
@@ -1642,7 +1647,7 @@ html {
         </div>
       </div>
       <div class="project-card" data-category="Photography" data-date="2023-06-27">
-        <img src="488715500_1248188167316243_3809770546867766353_n.jpg" alt="E-commerce Website">
+        <img loading="lazy" src="488715500_1248188167316243_3809770546867766353_n.jpg" alt="E-commerce Website">
         <div class="project-info">
           <h3>Family day out at Seethawaka Miracle Nature Resort </h3>
           <p>A collection of photographs capturing the essence of a family day out at Seethawaka Miracle Nature Resort, focusing on the natural beauty and vibrant family moments.</p>
@@ -1650,7 +1655,7 @@ html {
         </div>
       </div>
       <div class="project-card" data-category="Photography" data-date="2022-12-30">
-        <img src="484289122_1226149236186803_1463732404572039780_n.jpg" alt="E-commerce Website">
+        <img loading="lazy" src="484289122_1226149236186803_1463732404572039780_n.jpg" alt="E-commerce Website">
         <div class="project-info">
           <h3>Weerahannadige Family Gathering For Christmas.</h3>
           <p>A photographic capture of a memorable family gathering for Christmas, showcasing festive moments and the close-knit family atmosphere.</p>
@@ -1658,7 +1663,7 @@ html {
         </div>
       </div>
       <div class="project-card" data-category="Videography" data-date="2025-05-05">
-        <img src="Videography bakmaha 20225.jpg" alt="Event Videography">
+        <img loading="lazy" src="Videography bakmaha 20225.jpg" alt="Event Videography">
         <div class="project-info">
           <h3>Event Videography<br>(බක්මහ උළෙල 2025)</h3>
           <p>A collection of vibrant moments captured during the "බක්මහ උළෙල 2025" event, showcasing participants in traditional attire, celebrating cultural unity and togetherness. The videography highlights the joyful atmosphere of this annual celebration, which brings people together for a memorable communal experience</p>
@@ -1666,7 +1671,7 @@ html {
         </div>
       </div>
       <div class="project-card" data-category="Videography" data-date="2024-12-01">
-        <img src="CrownedQueens.webp" alt="Crowned Queens">
+        <img loading="lazy" src="CrownedQueens.webp" alt="Crowned Queens">
         <div class="project-info">
           <h3>Event Videography<br>(Crowned Queens)</h3>
           <p>A celebration of the Princess of Wales College, 91 Batch, featuring a nostalgic batch party. The video showcases old photos from their school days, enhanced with portrait photography and creative lighting techniques, capturing the essence of their memorable journey.</p>
@@ -1674,7 +1679,7 @@ html {
         </div>
       </div>
       <div class="project-card" data-category="Videography" data-date="2025-01-23">
-        <img src="150th Jubilee Celebration 2025.webp" alt="St.Sebastian's Church Moratuwa">
+        <img loading="lazy" src="150th Jubilee Celebration 2025.webp" alt="St.Sebastian's Church Moratuwa">
         <div class="project-info">
           <h3>Event Videography<br>(150th Jubilee Celebration 2025)</h3>
           <p>A collection of dynamic and captivating moments captured during the 150th Jubilee Celebration at St. Sebastian's Church, Moratuwa. The videography showcases the solemn procession and final blessing, emphasizing the rich cultural and spiritual significance of the event. With focus on the church’s beautiful architecture and the statue of St. Sebastian, this event represents a momentous occasion for the community.</p>
@@ -1682,7 +1687,7 @@ html {
         </div>
       </div>
       <div class="project-card" data-category="Videography" data-date="2024-10-15">
-        <img src="Wedding Surprise Dance Disni & Dilanka Wedding.jpg" alt="Wedding Surprise Dance Disni & Dilanka Wedding">
+        <img loading="lazy" src="Wedding Surprise Dance Disni & Dilanka Wedding.jpg" alt="Wedding Surprise Dance Disni & Dilanka Wedding">
         <div class="project-info">
           <h3>Event Videography<br>(Wedding Surprise Dance Disni & Dilanka Wedding)</h3>
           <p>A collection of dynamic and captivating moments captured during the 150th Jubilee Celebration at St. Sebastian's Church, Moratuwa. The videography showcases the solemn procession and final blessing, emphasizing the rich cultural and spiritual significance of the event. With focus on the church’s beautiful architecture and the statue of St. Sebastian, this event represents a momentous occasion for the community.</p>
@@ -1690,7 +1695,7 @@ html {
         </div>
       </div>
       <div class="project-card" data-category="Videography" data-date="2024-05-29">
-        <img src="HNB WESAK2024.webp" alt="SHNB වෙසක් කලාපය 2024">
+        <img loading="lazy" src="HNB WESAK2024.webp" alt="SHNB වෙසක් කලාපය 2024">
         <div class="project-info">
           <h3>Event Videography<br>(HNB වෙසක් කලාපය 2024)</h3>
           <p>A collection of dynamic and captivating moments captured during the 150th Jubilee Celebration at St. Sebastian's Church, Moratuwa. The videography showcases the solemn procession and final blessing, emphasizing the rich cultural and spiritual significance of the event. With focus on the church’s beautiful architecture and the statue of St. Sebastian, this event represents a momentous occasion for the community.</p>
@@ -1698,7 +1703,7 @@ html {
         </div>
       </div>
       <div class="project-card" data-category="Videography" data-date="2023-08-12">
-        <img src="Dileepatharindu.jpg" alt="Dileepa & Tharindu's Church Wedding Day">
+        <img loading="lazy" src="Dileepatharindu.jpg" alt="Dileepa & Tharindu's Church Wedding Day">
         <div class="project-info">
           <h3>Event Videography<br>(Dileepa & Tharindu's Church Wedding Day)</h3>
           <p>A collection of dynamic and captivating moments captured during the 150th Jubilee Celebration at St. Sebastian's Church, Moratuwa. The videography showcases the solemn procession and final blessing, emphasizing the rich cultural and spiritual significance of the event. With focus on the church’s beautiful architecture and the statue of St. Sebastian, this event represents a momentous occasion for the community.</p>
@@ -1706,7 +1711,7 @@ html {
         </div>
       </div>
       <div class="project-card" data-category="Photography" data-date="2020-12-29">
-        <img src="133610260_105967634766622_5335360289875028472_n.jpg" alt="Crib competition 2020 at St. Joseph's Church, Uyana, Moratuwa">
+        <img loading="lazy" src="133610260_105967634766622_5335360289875028472_n.jpg" alt="Crib competition 2020 at St. Joseph's Church, Uyana, Moratuwa">
         <div class="project-info">
           <h3>Crib Competition 2020 at St. Joseph's Church, Uyana, Moratuwa</h3>
           <p>Captured moments of creativity and devotion from the Crib Competition at St. Joseph's Church, showcasing intricate designs and festive spirit.</p>
@@ -1714,7 +1719,7 @@ html {
         </div>
       </div>
       <div class="project-card" data-category="Photography" data-date="2021-03-21">
-        <img src="156251945_132695215427197_6059095743253117290_n.jpg" alt="Black Sunday at St. Joseph's Church, Uyana, Moratuwa">
+        <img loading="lazy" src="156251945_132695215427197_6059095743253117290_n.jpg" alt="Black Sunday at St. Joseph's Church, Uyana, Moratuwa">
         <div class="project-info">
           <h3>Black Sunday at St. Joseph's Church, Uyana, Moratuwa</h3>
           <p>A series of powerful photographs from the Black Sunday service, highlighting the emotional significance and reflective atmosphere of the event.</p>
@@ -1722,7 +1727,7 @@ html {
         </div>
       </div>
       <div class="project-card" data-category="Photography" data-date="2021-03-10">
-        <img src="157266874_931188184288925_5307827127285796299_n.jpg" alt="Woman's Day Celebration at Moratuwa Divisional Secretariat">
+        <img loading="lazy" src="157266874_931188184288925_5307827127285796299_n.jpg" alt="Woman's Day Celebration at Moratuwa Divisional Secretariat">
         <div class="project-info">
           <h3>Woman's Day Celebration at Moratuwa Divisional Secretariat</h3>
           <p>A visual tribute to the Women’s Day Celebration at the Moratuwa Divisional Secretariat, capturing moments of empowerment, solidarity, and community recognition.</p>
@@ -1730,7 +1735,7 @@ html {
         </div>
       </div>
       <div class="project-card" data-category="Photography" data-date="2021-07-20">
-        <img src="467948351_938252254871485_2157181263095905836_n.jpg" alt="සෞබාග්‍යා දැක්ම වැඩසටහන">
+        <img loading="lazy" src="467948351_938252254871485_2157181263095905836_n.jpg" alt="සෞබාග්‍යා දැක්ම වැඩසටහන">
         <div class="project-info">
           <h3>සෞබාග්‍යා දැක්ම වැඩසටහන</h3>
           <p>A photography series from the Saubagya Dakma Program, showcasing the dedication and community engagement during this cultural and educational event.</p>
@@ -1738,7 +1743,7 @@ html {
         </div>
       </div>
       <div class="project-card" data-category="Photography" data-date="2021-08-02">
-        <img src="468101005_940351454661565_2962879343320892942_n.jpg" alt="BABY LISARA'S FIRST BIRTHDAY ">
+        <img loading="lazy" src="468101005_940351454661565_2962879343320892942_n.jpg" alt="BABY LISARA'S FIRST BIRTHDAY ">
         <div class="project-info">
           <h3>BABY LISARA'S FIRST BIRTHDAY </h3>
           <p>A heartwarming collection of photos capturing the joyous moments from Baby Lisara’s first birthday, featuring family celebrations and fun-filled moments.</p>
@@ -1746,7 +1751,7 @@ html {
         </div>
       </div>
       <div class="project-card" data-category="Photography" data-date="2021-09-21">
-        <img src="469823138_949474643749246_7101225075832102550_n.jpg" alt="Liyan's 3rd Birthday ">
+        <img loading="lazy" src="469823138_949474643749246_7101225075832102550_n.jpg" alt="Liyan's 3rd Birthday ">
         <div class="project-info">
           <h3>Liyan's 3rd Birthday</h3>
           <p>A playful and joyful photography collection from Liyan’s 3rd birthday celebration, capturing the essence of childhood joy and family togetherness.</p>
@@ -1754,7 +1759,7 @@ html {
         </div>
       </div>
       <div class="project-card" data-category="Photography" data-date="2021-11-26">
-        <img src="469939131_951293090234068_4502289051960135090_n.jpg" alt="FIRST HOLY COMMUNION at St. Sebastian's College, Moratuwa.">
+        <img loading="lazy" src="469939131_951293090234068_4502289051960135090_n.jpg" alt="FIRST HOLY COMMUNION at St. Sebastian's College, Moratuwa.">
         <div class="project-info">
           <h3>FIRST HOLY COMMUNION at St. Sebastian's College, Moratuwa.</h3>
           <p>A solemn photographic record of the First Holy Communion ceremony at St. Sebastian’s College, capturing moments of spirituality and youthfulness.</p>
@@ -1762,7 +1767,7 @@ html {
         </div>
       </div>
       <div class="project-card" data-category="Photography" data-date="2022-02-20">
-        <img src="470145798_953326556697388_3593364636281197309_n.jpg" alt="Princess Of Wales' College  1990 O/L & 1993 A/L Batch Purplicious Batch Party">
+        <img loading="lazy" src="470145798_953326556697388_3593364636281197309_n.jpg" alt="Princess Of Wales' College  1990 O/L & 1993 A/L Batch Purplicious Batch Party">
         <div class="project-info">
           <h3>Princess Of Wales' College  1990 O/L & 1993 A/L Batch Purplicious Batch Party</h3>
           <p>Photographs from the Purplicious Batch Party, celebrating the 1990 O/L and 1993 A/L batch at Princess of Wales' College, filled with nostalgia, laughter, and reunion moments.</p>
@@ -1770,7 +1775,7 @@ html {
         </div>
       </div>
       <div class="project-card" data-category="Photography" data-date="2022-11-18">
-        <img src="469246864_544242701848315_225614814466106872_n.jpg" alt="අභිසෙස් අභිමන් 2022 මොරටුව සාහිත්‍යය මහෝත්සවය">
+        <img loading="lazy" src="469246864_544242701848315_225614814466106872_n.jpg" alt="අභිසෙස් අභිමන් 2022 මොරටුව සාහිත්‍යය මහෝත්සවය">
         <div class="project-info">
           <h3>අභිසෙස් අභිමන් 2022 මොරටුව සාහිත්‍යය මහෝත්සවය</h3>
           <p>A visual chronicle of the Abhises Abhiman 2022 Literary Festival in Moratuwa, capturing literary discussions, cultural performances, and vibrant community engagement.</p>
@@ -1778,7 +1783,7 @@ html {
         </div>
       </div>
       <div class="project-card" data-category="Photography" data-date="2023-08-04">
-        <img src="Dileepatharindu.jpg" alt="Dileepa and Tharindu's Wedding">
+        <img loading="lazy" src="Dileepatharindu.jpg" alt="Dileepa and Tharindu's Wedding">
         <div class="project-info">
           <h3>Dileepa and Tharindu's Wedding</h3>
           <p>Capturing the magical moments from Dileepa and Tharindu’s church wedding day, this photography collection showcases emotional vows and vibrant celebrations.</p>
@@ -1786,7 +1791,7 @@ html {
         </div>
       </div>
       <div class="project-card" data-category="Photography" data-date="2023-08-06">
-        <img src="489208909_1251191617015898_7645466936493574006_n.jpg" alt="Ramona's 24th Birthday ">
+        <img loading="lazy" src="489208909_1251191617015898_7645466936493574006_n.jpg" alt="Ramona's 24th Birthday ">
         <div class="project-info">
           <h3>Ramona's 24th Birthday </h3>
           <p>A fun and lively photographic collection from Ramona's 24th birthday celebration, featuring vibrant party moments and family connections.</p>
@@ -1794,7 +1799,7 @@ html {
         </div>
       </div>
       <div class="project-card" data-category="Photography" data-date="2023-11-01">
-        <img src="491951422_1258860702915656_3345912780584634732_n.jpg" alt="LECO Head Office Dayouting 2023 ">
+        <img loading="lazy" src="491951422_1258860702915656_3345912780584634732_n.jpg" alt="LECO Head Office Dayouting 2023 ">
         <div class="project-info">
           <h3>LECO Head Office Dayouting 2023</h3>
           <p>A series of photographs from the LECO Head Office Dayouting 2023 event, documenting the fun-filled activities, team bonding, and scenic locations.</p>
@@ -1802,7 +1807,7 @@ html {
         </div>
       </div>
       <div class="project-card" data-category="Photography" data-date="2023-12-28">
-        <img src="492404049_1267125655422494_6091462449494518274_n.jpg" alt="CHRISTMAS PARTY 2023 ">
+        <img loading="lazy" src="492404049_1267125655422494_6091462449494518274_n.jpg" alt="CHRISTMAS PARTY 2023 ">
         <div class="project-info">
           <h3>CHRISTMAS PARTY 2023</h3>
           <p>A festive collection of photographs from the Christmas Party 2023, capturing moments of joy, camaraderie, and holiday spirit.</p>
@@ -1810,7 +1815,7 @@ html {
         </div>
       </div>
       <div class="project-card" data-category="Photography" data-date="2024-03-12">
-        <img src="494074564_1271928681608858_8970535974621065722_n.jpg" alt="Hashen's 21">
+        <img loading="lazy" src="494074564_1271928681608858_8970535974621065722_n.jpg" alt="Hashen's 21">
         <div class="project-info">
           <h3>Hashen's 21</h3>
           <p>A fun and lively photographic collection from Hashen’s 21st birthday celebration, featuring vibrant party moments and family connections.</p>
@@ -1818,7 +1823,7 @@ html {
         </div>
       </div>
       <div class="project-card" data-category="Photography" data-date="2024-04-15">
-        <img src="494715589_1273462434788816_1609566036513289890_n.jpg" alt="Sinhala and Tamil New Year Family Party 2024">
+        <img loading="lazy" src="494715589_1273462434788816_1609566036513289890_n.jpg" alt="Sinhala and Tamil New Year Family Party 2024">
         <div class="project-info">
           <h3>Sinhala and Tamil New Year Family Party 2024</h3>
           <p>Capturing the colorful and joyous moments from the Sinhala and Tamil New Year Family Party 2024, focusing on traditional customs, family gatherings, and festive fun.</p>
@@ -1826,7 +1831,7 @@ html {
         </div>
       </div>
       <div class="project-card" data-category="Photography" data-date="2024-05-09">
-        <img src="494195082_1274453058023087_977742586331437889_n.jpg" alt="Dilshi's 21">
+        <img loading="lazy" src="494195082_1274453058023087_977742586331437889_n.jpg" alt="Dilshi's 21">
         <div class="project-info">
           <h3>Dilshi's 21</h3>
           <p>A joyful and intimate collection of photographs from Dilshi’s 21st birthday, capturing the celebratory moments and vibrant family spirit.</p>
@@ -1834,7 +1839,7 @@ html {
         </div>
       </div>
       <div class="project-card" data-category="Photography" data-date="2024-05-24">
-        <img src="443716698_984748746993521_2093335626117725225_n.jpg" alt="HNB වෙසක් කලාපය 2024">
+        <img loading="lazy" src="443716698_984748746993521_2093335626117725225_n.jpg" alt="HNB වෙසක් කලාපය 2024">
         <div class="project-info">
           <h3>HNB වෙසක් කලාපය 2024</h3>
           <p>A vibrant and celebratory photography collection from the HNB Vesak Kalapaya 2024 event, capturing moments of togetherness and cultural celebration. This series highlights the joyful atmosphere, showcasing participants in traditional attire and reflecting the festive spirit of the occasion.</p>
@@ -1842,7 +1847,7 @@ html {
         </div>
       </div>
       <div class="project-card" data-category="Photography" data-date="2024-06-16">
-        <img src="448544313_1002133985254997_1210810554750543908_n.jpg" alt="Ashanthi's Birthday">
+        <img loading="lazy" src="448544313_1002133985254997_1210810554750543908_n.jpg" alt="Ashanthi's Birthday">
         <div class="project-info">
           <h3>Ashanthi's Birthday</h3>
           <p>A fun and lively photographic collection from Ashanthi's birthday celebration, featuring vibrant party moments and family connections.</p>
@@ -1850,7 +1855,7 @@ html {
         </div>
       </div>
       <div class="project-card" data-category="Photography" data-date="2024-07-08">
-        <img src="450077000_1018407860294276_4843943460216058765_n.jpg" alt="Nishel's 12">
+        <img loading="lazy" src="450077000_1018407860294276_4843943460216058765_n.jpg" alt="Nishel's 12">
         <div class="project-info">
           <h3>Nishel's 12</h3>
           <p>A fun and lively photographic collection from Nishel's 12th birthday celebration, featuring vibrant party moments and family connections.</p>
@@ -1858,7 +1863,7 @@ html {
         </div>
       </div>
       <div class="project-card" data-category="Photography" data-date="2024-07-27">
-        <img src="453238281_1033381532130242_4505875415190207693_n.jpg" alt="Dumindu's 21">
+        <img loading="lazy" src="453238281_1033381532130242_4505875415190207693_n.jpg" alt="Dumindu's 21">
         <div class="project-info">
           <h3>Dumindu's 21</h3>
           <p>A joyful and intimate collection of photographs from Dumindu's 21st birthday, capturing the celebratory moments and vibrant family spirit.</p>
@@ -1866,7 +1871,7 @@ html {
         </div>
       </div>
       <div class="project-card" data-category="Photography" data-date="2024-08-14">
-        <img src="455132820_1047101037424958_8514108911229270539_n.jpg" alt="Ramona's 25th Birthday">
+        <img loading="lazy" src="455132820_1047101037424958_8514108911229270539_n.jpg" alt="Ramona's 25th Birthday">
         <div class="project-info">
           <h3>Ramona's 25th Birthday</h3>
           <p>A joyful and intimate collection of photographs from Ramona's 25th birthday, capturing the celebratory moments and vibrant family spirit.</p>
@@ -1874,7 +1879,7 @@ html {
         </div>
       </div>
       <div class="project-card" data-category="Photography" data-date="2024-09-02">
-        <img src="458203512_1061708502630878_2438144445626157069_n.jpg" alt="Dila's 21">
+        <img loading="lazy" src="458203512_1061708502630878_2438144445626157069_n.jpg" alt="Dila's 21">
         <div class="project-info">
           <h3>Dila's 21</h3>
           <p>A joyful and intimate collection of photographs from Dila's 21 birthday, capturing the celebratory moments and vibrant family spirit.</p>
@@ -1882,7 +1887,7 @@ html {
         </div>
       </div>
       <div class="project-card" data-category="Photography" data-date="2024-09-27">
-        <img src="461334327_1083743320427396_3917750925213596370_n.jpg" alt="Trip to Ella & Nuwara Eliya 16-18/09/2024">
+        <img loading="lazy" src="461334327_1083743320427396_3917750925213596370_n.jpg" alt="Trip to Ella & Nuwara Eliya 16-18/09/2024">
         <div class="project-info">
           <h3>Trip to Ella & Nuwara Eliya <br>16-18/09/2024</h3>
           <p>A scenic photography series from the trip to Ella and Nuwara Eliya, featuring breathtaking landscapes, local culture, and memorable travel moments.</p>
@@ -1890,7 +1895,7 @@ html {
         </div>
       </div>
       <div class="project-card" data-category="Photography" data-date="2024-11-18">
-        <img src="467434368_1129524792515915_6943418672177264201_n.jpg" alt="Golden Wedding Anniversary of Reeta & Barinton">
+        <img loading="lazy" src="467434368_1129524792515915_6943418672177264201_n.jpg" alt="Golden Wedding Anniversary of Reeta & Barinton">
         <div class="project-info">
           <h3>Golden Wedding Anniversary of Reeta & Barinton</h3>
           <p>A touching collection of photographs from Reeta & Barinton’s Golden Wedding Anniversary celebration, capturing the love, legacy, and family togetherness of this special occasion.</p>
@@ -1898,7 +1903,7 @@ html {
         </div>
       </div>
       <div class="project-card" data-category="Software Development" data-date="2025-03-02">
-        <img src="POS Stystem.jpg" alt="Point of Sale System (POS System)">
+        <img loading="lazy" src="POS Stystem.jpg" alt="Point of Sale System (POS System)">
         <div class="project-info">
           <h3>Point of Sale System (POS System) </h3>
           <p>In my 4th semester of the HND in Computing at IAICampus, I developed a Point of Sale (POS) system for a retail business, focusing on inventory management, sales tracking, and reporting. I designed a user-friendly interface for both administrators and cashiers, ensuring efficient transactions and data handling, while incorporating automated testing for reliability.</p>
@@ -1906,14 +1911,14 @@ html {
         </div>
       </div>
       <div class="project-card" data-category="Graphic Design" data-date="2023-12-31">
-        <img src="Calendar for the year 2024.jpg" alt="The Cover for the 2024 Parish Calendar">
+        <img loading="lazy" src="Calendar for the year 2024.jpg" alt="The Cover for the 2024 Parish Calendar">
         <div class="project-info">
           <h3>The Cover for the 2024 Parish Calendar</h3>
           <p>As the editor in the St. Joseph’s Church Uyana Media Unit, I designed the cover for the 2024 parish calendar. The design features a spiritual theme with imagery of the Sacred Hearts of Jesus and Mary, complemented by the iconic church buildings of St. Sebastian’s Church, Moratuwa, and St. Joseph’s Church, Uyana. This calendar cover aims to reflect the beauty and significance of our parish’s community and faith.</p>
         </div>
       </div>
       <div class="project-card" data-category="Graphic Design" data-date="2023-12-31">
-        <img src="Crowned Queens POSTER.jpg" alt="Poster for The Crowned Queens Batch Party">
+        <img loading="lazy" src="Crowned Queens POSTER.jpg" alt="Poster for The Crowned Queens Batch Party">
         <div class="project-info">
           <h3>Poster for The Crowned Queens Batch Party</h3>
           <p>As the editor in the St. Joseph’s Church Uyana Media Unit, I designed the cover for the 2024 parish calendar. The design features a spiritual theme with imagery of the Sacred Hearts of Jesus and Mary, complemented by the iconic church buildings of St. Sebastian’s Church, Moratuwa, and St. Joseph’s Church, Uyana. This calendar cover aims to reflect the beauty and significance of our parish’s community and faith.</p>
@@ -1921,8 +1926,8 @@ html {
       </div>
       <div class="project-card" data-category="Graphic Design" data-date="2025-01-10">
         <div class="slideshow-container">
-          <img class="slide-img active" src="St. Sebastian's Church Moratuwa 150th English corrected.jpg" alt="150th Jubilee Celebration 2025">
-          <img class="slide-img" src="St. Sebastian's Church Moratuwa 150th Sinhala.jpg" alt="150th Jubilee Celebration 2025">
+          <img loading="lazy" class="slide-img active" src="St. Sebastian's Church Moratuwa 150th English corrected.jpg" alt="150th Jubilee Celebration 2025">
+          <img loading="lazy" class="slide-img" src="St. Sebastian's Church Moratuwa 150th Sinhala.jpg" alt="150th Jubilee Celebration 2025">
         </div>
         <div class="project-info">
           <h3>150th Jubilee Celebration 2025 <br>(Paper Add)</h3>
@@ -1931,8 +1936,8 @@ html {
       </div>
       <div class="project-card" data-category="Graphic Design" data-date="2024-01-10">
         <div class="slideshow-container">
-          <img class="slide-img active" src="St. Sebastian’s Church - 0222.jpg" alt="149th Annual Feast of St. Sebastian’s Church, Moratuwa.">
-          <img class="slide-img" src="St. Sebastian’s Church0111.jpg" alt="149th Annual Feast of St. Sebastian’s Church, Moratuwa.">
+          <img loading="lazy" class="slide-img active" src="St. Sebastian’s Church - 0222.jpg" alt="149th Annual Feast of St. Sebastian’s Church, Moratuwa.">
+          <img loading="lazy" class="slide-img" src="St. Sebastian’s Church0111.jpg" alt="149th Annual Feast of St. Sebastian’s Church, Moratuwa.">
         </div>
         <div class="project-info">
           <h3>149th Annual Feast of St. Sebastian’s Church, Moratuwa.<br>(Paper Add)</h3>
@@ -1941,8 +1946,8 @@ html {
       </div>
       <div class="project-card" data-category="Graphic Design" data-date="2024-04-20">
         <div class="slideshow-container">
-          <img class="slide-img active" src="Paper Add SJC English 2024.jpg" alt="Paper Add SJC English 2024">
-          <img class="slide-img" src="Paper Add SJC Sinhala 2024.jpg" alt="Paper Add SJC Sinhala 2024">
+          <img loading="lazy" class="slide-img active" src="Paper Add SJC English 2024.jpg" alt="Paper Add SJC English 2024">
+          <img loading="lazy" class="slide-img" src="Paper Add SJC Sinhala 2024.jpg" alt="Paper Add SJC Sinhala 2024">
         </div>
         <div class="project-info">
           <h3>The Annual Feast 2024 of St. Joseph’s Church, Uyana, Moratuwa.<br>(Paper Add)</h3>
@@ -1950,49 +1955,49 @@ html {
         </div>
       </div>
       <div class="project-card" data-category="Graphic Design" data-date="2024-08-28">
-        <img src="Dila Invitation.jpg" alt="Invitation card of Dila’s 21st">
+        <img loading="lazy" src="Dila Invitation.jpg" alt="Invitation card of Dila’s 21st">
         <div class="project-info">
           <h3>Invitation card of Dila’s 21st</h3>
           <p>I designed this elegant invitation card for Dila’s 21st birthday celebration, blending a modern black-and-gold theme with a touch of festive sparkle to reflect the significance of this milestone event. The layout highlights the key event details including date, time, venue, dress code, and RSVP while the use of stylish typography and balloon elements creates a celebratory and refined atmosphere. This invitation was crafted to set the tone for an unforgettable evening at Hotel Gangadhari, Panadura, with family and friends gathering to mark Dila’s special day.</p>
         </div>
       </div>
       <div class="project-card" data-category="Graphic Design" data-date="2023-08-01">
-        <img src="Wedding invitation.jpg" alt="Wedding invitation card of Dileepa and Tharindu">
+        <img loading="lazy" src="Wedding invitation.jpg" alt="Wedding invitation card of Dileepa and Tharindu">
         <div class="project-info">
           <h3>Wedding invitation card of Dileepa and Tharindu</h3>
           <p>I designed this elegant wedding invitation card for Dileepa and Tharindu, combining a soft floral theme with classical decorative elements to reflect the warmth and grace of their union. The design gently communicates the heartfelt request for presence at their wedding mass held at St. Joseph’s Church, Uyana, on 4th August 2023, and the reception on 7th August at Green Court Hotel, Homagama. With its subtle color palette, refined typography, and ornamental flourishes, the card captures the couple’s joyful spirit and traditional values, creating a timeless piece to mark the beginning of their new journey together.</p>
         </div>
       </div>
             <div class="project-card" style="background-color: #000000; color: white;" data-category="Graphic Design" data-date="2020-09-19">
-        <img src="ReD Productions LOGO.png" alt="The official logo of ReD Productions">
+        <img loading="lazy" src="ReD Productions LOGO.png" alt="The official logo of ReD Productions">
         <div class="project-info">
           <h3>The official logo of ReD Productions</h3>
           <p style="color: rgb(255, 255, 255);">I designed the official logo for ReD Productions, our creative YouTube channel focused on video editing, storytelling, and entertainment content. The design features a bold, stylized skull with headphones engulfed in flames, symbolizing energy, intensity, and passion for digital creation. The use of red, yellow, and black enhances its modern and striking appearance, while the strong typography reinforces the brand’s bold identity. This logo was crafted to reflect the unique personality and visual edge of ReD Productions, representing the dynamic work we produce as a creative team.</p>
         </div>
       </div>
       <div class="project-card" style="background-color: #05388f; color: white;" data-category="Graphic Design" data-date="2023-09-19">
-        <img src="093.png" alt="The official logo of the HNB Dehiwala Branch Sports Fiesta 2023">
+        <img loading="lazy" src="093.png" alt="The official logo of the HNB Dehiwala Branch Sports Fiesta 2023">
         <div class="project-info">
           <h3>The official logo of the HNB Dehiwala Branch Sports Fiesta 2023</h3>
           <p style="color: rgb(196, 196, 196);">I designed this official logo for the HNB Dehiwala Branch Sports Fiesta 2023, incorporating the branch ID “093” as the central design element. The bold numeric design is creatively fused with a stylized cricket ball, symbolizing athletic energy, unity, and the spirit of competition. The clean black-and-white color scheme gives it versatility for use across both digital and print platforms. This logo was crafted to represent the identity and pride of HNB Dehiwala (Branch 093) during the annual sports event, celebrating teamwork, enthusiasm, and corporate spirit.</p>
         </div>
       </div>
       <div class="project-card" data-category="Graphic Design" data-date="2020-12-29">
-        <img src="RAKI STUDIOS.png" alt="The official logo of RaAKI STUDIOS">
+        <img loading="lazy" src="RAKI STUDIOS.png" alt="The official logo of RaAKI STUDIOS">
         <div class="project-info">
           <h3>The official logo of RaAKI STUDIOS</h3>
           <p>I designed this official logo for Raki Studios, my personal photography and creative brand. The bold "R" mark, rendered in a sleek red gradient with a crown element, symbolizes creativity, leadership, and excellence in visual storytelling. The crown represents the premium quality and pride I bring to every project, while the strong red and black contrast enhances brand recognition and visual impact. The use of sharp lines and elegant typography reflects the modern, confident identity of Raki Studios dedicated to capturing</p>
         </div>
       </div>
       <div class="project-card" data-category="Graphic Design" data-date="2024-10-12">
-        <img src="465112866_535715255855159_5462624802242375907_n.jpg" alt="Poster of the Feast of All Saints">
+        <img loading="lazy" src="465112866_535715255855159_5462624802242375907_n.jpg" alt="Poster of the Feast of All Saints">
         <div class="project-info">
           <h3>Poster of the Feast of All Saints</h3>
           <p>As the editor in the St. Joseph’s Church Uyana Media Unit, I designed this commemorative poster for the Feast of All Saints. The visual composition features a reverent collection of saintly figures with radiant halos, set against a celestial background that evokes the glory of heaven. The bold typography of the word "SAINTS" draws attention to the central theme, while the message below offers a spiritual reflection on the importance of seeking the intercession of the saints. Created for community sharing on the church’s platforms, this design aims to inspire faith and devotion by honoring the legacy of holiness celebrated on All Saints Day.</p>
         </div>
       </div>
       <div class="project-card" data-category="Graphic Design" data-date="2023-08-06">
-        <img src="new car wash 02.jpg" alt="Poster to promote Car Wash Fundraiser">
+        <img loading="lazy" src="new car wash 02.jpg" alt="Poster to promote Car Wash Fundraiser">
         <div class="project-info">
           <h3>Poster to promote Car Wash Fundraiser</h3>
           <p>As the editor in the St. Joseph’s Church Uyana Media Unit, I designed this vibrant poster to promote Car Wash Fundraiser held on August 6th, 2023. The design features a striking yellow sports car surrounded by animated soap bubbles, reflecting the event’s fun and energetic atmosphere. Bold, playful typography was used to draw attention to key details such as the date, time, venue, and price, ensuring clear communication to the parish community. This poster was created to attract participation and support for our media initiatives while maintaining a clean, engaging, and visually appealing layout aligned with our parish’s youthful spirit.</p>
@@ -2064,7 +2069,7 @@ html {
 
 
   <!-- AOS Animation Library -->
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js" defer></script>
   <script>
     AOS.init({
       duration: 1000,
@@ -2567,7 +2572,7 @@ const projectQuestions = [
     originalSendMessage(); // continue as normal
   };
 
-
+  // Lazy loading handled via markup attributes
   </script>
 </body>
 </html>
