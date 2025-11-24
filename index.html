@@ -2085,6 +2085,17 @@ html {
     AOS.init({ duration: 1000, offset: 200 });
   });
 
+  // Set year and play fade-ins
+  (function(){
+    const y = document.getElementById('year');
+    if(y) y.textContent = new Date().getFullYear();
+
+    window.addEventListener('load', () => {
+      document.querySelectorAll('.fade-in').forEach((el,i)=>{
+        setTimeout(()=>el.classList.add('on'), 100 + i*120);
+      });
+    });
+  })();
 
     // Filter Projects Section
     const filterButtons = document.querySelectorAll('.filter-btn');
@@ -2593,21 +2604,11 @@ const projectQuestions = [
 
 
 
-  // Set year and play fade-ins
-  (function(){
-    const y = document.getElementById('year');
-    if(y) y.textContent = new Date().getFullYear();
-
-    window.addEventListener('load', () => {
-      document.querySelectorAll('.fade-in').forEach((el,i)=>{
-        setTimeout(()=>el.classList.add('on'), 100 + i*120);
-      });
-    });
-  })();
 
   </script>
 </body>
 </html>
+
 
 
 
