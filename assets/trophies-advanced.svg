@@ -1,0 +1,21 @@
+<svg width="1200" height="300" viewBox="0 0 1200 300" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1200" y2="300"><stop stop-color="#020617"/><stop offset=".5" stop-color="#071526"/><stop offset="1" stop-color="#020617"/></linearGradient>
+<linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#FDE68A"/><stop offset=".5" stop-color="#F59E0B"/><stop offset="1" stop-color="#FB7185"/></linearGradient>
+<linearGradient id="blue" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#67E8F9"/><stop offset=".5" stop-color="#00BFFF"/><stop offset="1" stop-color="#8B5CF6"/></linearGradient>
+<filter id="g"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#38BDF8" opacity=".13"/></pattern>
+</defs>
+<rect width="1200" height="300" rx="24" fill="url(#bg)"/><rect width="1200" height="300" rx="24" fill="url(#dots)"><animateTransform attributeName="transform" type="translate" values="0 0;28 28" dur="10s" repeatCount="indefinite"/></rect>
+<text x="600" y="48" text-anchor="middle" fill="#E6F7FF" font-family="Segoe UI,Arial" font-size="28" font-weight="800">Achievement Showcase</text>
+<text x="600" y="75" text-anchor="middle" fill="#7DD3FC" font-family="Consolas,monospace" font-size="13">BUILD • LEARN • SHIP • IMPROVE</text>
+
+<g font-family="Segoe UI,Arial" text-anchor="middle">
+<g transform="translate(115 105)"><rect width="205" height="135" rx="20" fill="#0B1220" stroke="#164E63"/><circle cx="102" cy="45" r="28" fill="none" stroke="url(#gold)" stroke-width="5" stroke-dasharray="112 64"><animateTransform attributeName="transform" type="rotate" from="0 102 45" to="360 102 45" dur="6s" repeatCount="indefinite"/></circle><text x="102" y="54" font-size="25">🚀</text><text x="102" y="95" fill="#E2E8F0" font-size="17" font-weight="700">PROJECT BUILDER</text><text x="102" y="119" fill="#94A3B8" font-size="12">Practical software projects</text></g>
+<g transform="translate(370 105)"><rect width="205" height="135" rx="20" fill="#0B1220" stroke="#312E81"/><circle cx="102" cy="45" r="28" fill="none" stroke="url(#blue)" stroke-width="5" stroke-dasharray="100 76"><animateTransform attributeName="transform" type="rotate" from="360 102 45" to="0 102 45" dur="5s" repeatCount="indefinite"/></circle><text x="102" y="54" font-size="25">🤖</text><text x="102" y="95" fill="#E2E8F0" font-size="17" font-weight="700">AI EXPLORER</text><text x="102" y="119" fill="#94A3B8" font-size="12">ML and intelligent systems</text></g>
+<g transform="translate(625 105)"><rect width="205" height="135" rx="20" fill="#0B1220" stroke="#164E63"/><circle cx="102" cy="45" r="28" fill="none" stroke="url(#gold)" stroke-width="5" stroke-dasharray="118 58"><animateTransform attributeName="transform" type="rotate" from="0 102 45" to="360 102 45" dur="7s" repeatCount="indefinite"/></circle><text x="102" y="54" font-size="25">🎨</text><text x="102" y="95" fill="#E2E8F0" font-size="17" font-weight="700">CREATIVE TECH</text><text x="102" y="119" fill="#94A3B8" font-size="12">Design and development</text></g>
+<g transform="translate(880 105)"><rect width="205" height="135" rx="20" fill="#0B1220" stroke="#312E81"/><circle cx="102" cy="45" r="28" fill="none" stroke="url(#blue)" stroke-width="5" stroke-dasharray="108 68"><animateTransform attributeName="transform" type="rotate" from="360 102 45" to="0 102 45" dur="5.5s" repeatCount="indefinite"/></circle><text x="102" y="54" font-size="25">⚡</text><text x="102" y="95" fill="#E2E8F0" font-size="17" font-weight="700">CONTINUOUS GROWTH</text><text x="102" y="119" fill="#94A3B8" font-size="12">Learning through building</text></g>
+</g>
+<path d="M85 265H1115" stroke="url(#blue)" stroke-width="3" stroke-linecap="round" stroke-dasharray="160 30"><animate attributeName="stroke-dashoffset" values="0;-380" dur="5s" repeatCount="indefinite"/></path>
+<rect x="1" y="1" width="1198" height="298" rx="23" fill="none" stroke="#0EA5E9" stroke-opacity=".22" stroke-width="2"/>
+</svg>
