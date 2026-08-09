@@ -139,25 +139,22 @@ Personal portfolio showcasing software engineering, creative design and developm
 
 <div align="center">
 
-<img height="180" src="https://github-readme-stats.vercel.app/api?username=rakindufernando&show_icons=true&include_all_commits=true&count_private=false&bg_color=0d1117&title_color=00BFFF&text_color=c9d1d9&icon_color=00BFFF&border_color=1e293b" alt="Rakindu Fernando GitHub statistics"/>
+<img src="./assets/github-activity-advanced.svg" width="100%" alt="Advanced animated GitHub activity dashboard"/>
 
-<img height="180" src="https://github-readme-stats.vercel.app/api/top-langs/?username=rakindufernando&layout=compact&langs_count=8&bg_color=0d1117&title_color=00BFFF&text_color=c9d1d9&border_color=1e293b" alt="Most used languages"/>
+<br/>
 
-<br/><br/>
-
-<img width="90%" src="https://github-readme-activity-graph.vercel.app/graph?username=rakindufernando&bg_color=0d1117&color=67e8f9&line=00bfff&point=a78bfa&area=true&hide_border=true" alt="GitHub contribution activity graph"/>
+<a href="https://github.com/rakindufernando?tab=repositories"><img src="https://img.shields.io/badge/Explore-Repositories-00BFFF?style=for-the-badge&logo=github&logoColor=white" alt="Explore repositories"/></a>
+<a href="https://github.com/rakindufernando?tab=overview"><img src="https://img.shields.io/badge/View-Contributions-7C3AED?style=for-the-badge&logo=github&logoColor=white" alt="View contributions"/></a>
 
 </div>
 
-<p align="center"><sub>Dynamic GitHub cards depend on their public rendering services. The main animated graphics above are stored directly in this profile repository for better reliability.</sub></p>
-
 <img src="./assets/animated-divider.svg" width="100%" alt="Animated divider"/>
 
-## 🏆 GitHub Trophies
+## 🏆 Achievement Showcase
 
 <div align="center">
 
-<img src="https://github-profile-trophy.vercel.app/?username=rakindufernando&theme=onedark&no-frame=true&no-bg=true&margin-w=8&margin-h=8&column=6" alt="GitHub trophies"/>
+<img src="./assets/trophies-advanced.svg" width="100%" alt="Animated achievement showcase"/>
 
 </div>
 
@@ -167,11 +164,7 @@ Personal portfolio showcasing software engineering, creative design and developm
 
 <div align="center">
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/rakindufernando/rakindufernando/output/github-contribution-grid-snake-dark.svg"/>
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/rakindufernando/rakindufernando/output/github-contribution-grid-snake.svg"/>
-  <img alt="GitHub contribution grid snake animation" src="https://raw.githubusercontent.com/rakindufernando/rakindufernando/output/github-contribution-grid-snake.svg"/>
-</picture>
+<img src="./assets/snake-advanced.svg" width="100%" alt="Advanced animated contribution snake"/>
 
 </div>
 
