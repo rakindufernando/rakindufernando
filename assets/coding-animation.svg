@@ -1,0 +1,52 @@
+<svg width="900" height="330" viewBox="0 0 900 330" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="900" y2="330">
+      <stop stop-color="#020617"/>
+      <stop offset="1" stop-color="#0B1220"/>
+    </linearGradient>
+    <filter id="g"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="900" height="330" rx="24" fill="url(#bg)"/>
+  <rect x="24" y="24" width="852" height="282" rx="18" fill="#07101D" stroke="#1E293B"/>
+  <circle cx="52" cy="48" r="6" fill="#EF4444"/>
+  <circle cx="72" cy="48" r="6" fill="#F59E0B"/>
+  <circle cx="92" cy="48" r="6" fill="#22C55E"/>
+  <text x="122" y="54" fill="#94A3B8" font-family="Consolas, monospace" font-size="15">rakindu_dev.py</text>
+
+  <g font-family="Consolas, monospace" font-size="18">
+    <text x="70" y="100" fill="#7DD3FC">class</text>
+    <text x="132" y="100" fill="#E2E8F0">RakinduDeveloper</text>
+    <text x="315" y="100" fill="#E2E8F0">:</text>
+
+    <text x="92" y="137" fill="#C4B5FD">skills</text>
+    <text x="168" y="137" fill="#E2E8F0">=</text>
+    <text x="190" y="137" fill="#86EFAC">["Python", "Java", "AI", "Web", "Design"]</text>
+
+    <text x="92" y="174" fill="#C4B5FD">focus</text>
+    <text x="158" y="174" fill="#E2E8F0">=</text>
+    <text x="180" y="174" fill="#FDE68A">"Intelligent software + creative experiences"</text>
+
+    <text x="92" y="211" fill="#C4B5FD">status</text>
+    <text x="170" y="211" fill="#E2E8F0">=</text>
+    <text x="192" y="211" fill="#67E8F9">"Building something useful..."</text>
+
+    <text x="70" y="262" fill="#7DD3FC">print</text>
+    <text x="122" y="262" fill="#E2E8F0">(</text>
+    <text x="135" y="262" fill="#86EFAC">"Create. Learn. Improve."</text>
+    <text x="390" y="262" fill="#E2E8F0">)</text>
+  </g>
+
+  <rect x="430" y="245" width="10" height="23" fill="#00BFFF" filter="url(#g)">
+    <animate attributeName="opacity" values="1;0;1" dur="0.9s" repeatCount="indefinite"/>
+  </rect>
+
+  <circle cx="805" cy="98" r="30" fill="none" stroke="#00BFFF" stroke-width="3" stroke-dasharray="20 12">
+    <animateTransform attributeName="transform" type="rotate" from="0 805 98" to="360 805 98" dur="4s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="805" cy="98" r="12" fill="#00BFFF" opacity="0.75">
+    <animate attributeName="r" values="9;15;9" dur="1.8s" repeatCount="indefinite"/>
+  </circle>
+  <text x="805" y="155" text-anchor="middle" fill="#94A3B8" font-family="Consolas, monospace" font-size="14">AI ACTIVE</text>
+
+  <rect x="1" y="1" width="898" height="328" rx="23" fill="none" stroke="#00BFFF" stroke-opacity="0.22" stroke-width="2"/>
+</svg>
