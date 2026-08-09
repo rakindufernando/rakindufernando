@@ -1,0 +1,36 @@
+<svg width="1200" height="470" viewBox="0 0 1200 470" fill="none" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="470"><stop stop-color="#020617"/><stop offset=".5" stop-color="#071526"/><stop offset="1" stop-color="#020617"/></linearGradient>
+  <linearGradient id="cyan" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#22D3EE"/><stop offset=".55" stop-color="#00BFFF"/><stop offset="1" stop-color="#8B5CF6"/></linearGradient>
+  <radialGradient id="halo"><stop stop-color="#00BFFF" stop-opacity=".38"/><stop offset="1" stop-color="#00BFFF" stop-opacity="0"/></radialGradient>
+  <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse"><path d="M36 0H0V36" stroke="#38BDF8" stroke-opacity=".07"/></pattern>
+  <filter id="glow"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <clipPath id="chartClip"><rect x="70" y="286" width="1060" height="110" rx="14"/></clipPath>
+</defs>
+<rect width="1200" height="470" rx="26" fill="url(#bg)"/>
+<rect width="1200" height="470" rx="26" fill="url(#grid)"><animateTransform attributeName="transform" type="translate" values="0 0;36 36" dur="9s" repeatCount="indefinite"/></rect>
+<circle cx="170" cy="70" r="180" fill="url(#halo)"><animate attributeName="cx" values="150;310;150" dur="8s" repeatCount="indefinite"/></circle>
+<circle cx="1030" cy="390" r="160" fill="url(#halo)" opacity=".45"><animate attributeName="cy" values="390;290;390" dur="7s" repeatCount="indefinite"/></circle>
+
+<text x="64" y="64" fill="#E6F7FF" font-family="Segoe UI,Arial" font-size="30" font-weight="800">GitHub Activity Dashboard</text>
+<text x="64" y="92" fill="#7DD3FC" font-family="Consolas,monospace" font-size="15">PUBLIC PROFILE SNAPSHOT • RAKINDUFERNANDO</text>
+<circle cx="1090" cy="69" r="8" fill="#22C55E"><animate attributeName="opacity" values=".25;1;.25" dur="1.4s" repeatCount="indefinite"/></circle>
+<text x="1108" y="75" fill="#86EFAC" font-family="Consolas,monospace" font-size="14">ONLINE</text>
+
+<g font-family="Segoe UI,Arial">
+  <g transform="translate(65 128)"><rect width="240" height="112" rx="18" fill="#0B1220" stroke="#164E63"/><text x="24" y="34" fill="#94A3B8" font-size="14">PUBLIC REPOSITORIES</text><text x="24" y="83" fill="#67E8F9" font-size="42" font-weight="800" filter="url(#glow)">7</text><circle cx="204" cy="56" r="23" stroke="#00BFFF" stroke-width="3" stroke-dasharray="90 55"><animateTransform attributeName="transform" type="rotate" from="0 204 56" to="360 204 56" dur="5s" repeatCount="indefinite"/></circle></g>
+  <g transform="translate(330 128)"><rect width="240" height="112" rx="18" fill="#0B1220" stroke="#164E63"/><text x="24" y="34" fill="#94A3B8" font-size="14">FOLLOWERS</text><text x="24" y="83" fill="#C4B5FD" font-size="42" font-weight="800">0</text><path d="M183 70c0-21 34-21 34 0M200 52a12 12 0 1 0 0-24 12 12 0 0 0 0 24Z" stroke="#A78BFA" stroke-width="3"><animate attributeName="opacity" values=".4;1;.4" dur="2s" repeatCount="indefinite"/></path></g>
+  <g transform="translate(595 128)"><rect width="240" height="112" rx="18" fill="#0B1220" stroke="#164E63"/><text x="24" y="34" fill="#94A3B8" font-size="14">FOLLOWING</text><text x="24" y="83" fill="#67E8F9" font-size="42" font-weight="800">1</text><path d="M176 59h48M205 40l19 19-19 19" stroke="#22D3EE" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><animateTransform attributeName="transform" type="translate" values="-5 0;5 0;-5 0" dur="1.8s" repeatCount="indefinite"/></path></g>
+  <g transform="translate(860 128)"><rect width="275" height="112" rx="18" fill="#0B1220" stroke="#164E63"/><text x="24" y="34" fill="#94A3B8" font-size="14">PROFILE SINCE</text><text x="24" y="80" fill="#C4B5FD" font-size="34" font-weight="800">JAN 2025</text><circle cx="229" cy="56" r="24" stroke="#8B5CF6" stroke-width="3"/><path d="M229 43v14l10 8" stroke="#C4B5FD" stroke-width="3" stroke-linecap="round"><animateTransform attributeName="transform" type="rotate" from="0 229 56" to="360 229 56" dur="8s" repeatCount="indefinite"/></path></g>
+</g>
+
+<rect x="65" y="272" width="1070" height="142" rx="18" fill="#060D18" stroke="#172554"/>
+<text x="86" y="301" fill="#94A3B8" font-family="Consolas,monospace" font-size="13">ACTIVITY SIGNAL</text>
+<g clip-path="url(#chartClip)">
+  <path d="M75 380 C130 378 150 342 190 350 S270 384 315 365 S370 310 415 325 S480 380 530 356 S600 292 650 318 S720 380 775 349 S835 305 890 329 S955 375 1010 345 S1080 318 1135 337" stroke="url(#cyan)" stroke-width="4" fill="none" stroke-linecap="round" filter="url(#glow)" stroke-dasharray="1500" stroke-dashoffset="1500"><animate attributeName="stroke-dashoffset" values="1500;0" dur="3.2s" fill="freeze"/></path>
+  <path d="M75 380 C130 378 150 342 190 350 S270 384 315 365 S370 310 415 325 S480 380 530 356 S600 292 650 318 S720 380 775 349 S835 305 890 329 S955 375 1010 345 S1080 318 1135 337 L1135 405 L75 405Z" fill="#00BFFF" opacity=".08"><animate attributeName="opacity" values=".03;.13;.03" dur="3s" repeatCount="indefinite"/></path>
+  <circle r="7" fill="#E0F2FE" filter="url(#glow)"><animateMotion dur="6s" repeatCount="indefinite" path="M75 380 C130 378 150 342 190 350 S270 384 315 365 S370 310 415 325 S480 380 530 356 S600 292 650 318 S720 380 775 349 S835 305 890 329 S955 375 1010 345 S1080 318 1135 337"/></circle>
+</g>
+<text x="600" y="447" text-anchor="middle" fill="#64748B" font-family="Consolas,monospace" font-size="13">LIVE-STYLE ANIMATION • PROFILE VALUES STORED LOCALLY FOR RELIABLE RENDERING</text>
+<rect x="1" y="1" width="1198" height="468" rx="25" stroke="#0EA5E9" stroke-opacity=".25" stroke-width="2"/>
+</svg>
